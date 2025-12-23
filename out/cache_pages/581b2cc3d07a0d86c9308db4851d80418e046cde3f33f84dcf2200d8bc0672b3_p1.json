@@ -1,0 +1,53 @@
+{
+  "document_type": "счет на оплату",
+  "iin_bin": "061040005628",
+  "company_name": "Товарищество с ограниченной ответственностью \"Direct Distribution Company\"",
+  "document_number": "Счет на оплату № СУБ-00000001",
+  "document_date": "30.05.2022",
+  "subtotal": "337 000,00",
+  "vat": "36 107,14",
+  "total": "337 000,00",
+  "items": [
+    {
+      "name": "Кондиционер настенный Gree-07: Bora R410A класс A GWH07AAA-K3NNA1A (без соединительной инсталляции)",
+      "sku": null,
+      "quantity": "1",
+      "unit": "шт.",
+      "price": "103 000,00",
+      "total": "103000.00"
+    },
+    {
+      "name": "Кондиционер настенный Gree-09: U-Crown R410A GWH09UB-K3DNA4F (Серебро) (комплектуется медными трубами)",
+      "sku": null,
+      "quantity": "1",
+      "unit": "шт.",
+      "price": "234 000,00",
+      "total": "234000.00"
+    }
+  ],
+  "error": null,
+  "page_number": 1,
+  "total_pages_processed": 1,
+  "supplier": {
+    "name": "Товарищество с ограниченной ответственностью \"Direct Distribution Company\"",
+    "bin_iin": "061040005628",
+    "address": "Республика Казахстан, г. Алматы, мкр. Атырау, д.60",
+    "phone": "+7 (727) 225 55 22"
+  },
+  "buyer": {
+    "name": "Товарищество с ограниченной ответственностью «Michael»",
+    "bin_iin": "170940023817",
+    "address": "141200, Республика Казахстан, Павлодарская обл., г.Экибастуз, ул.Абая, здание 60/1, офис 113"
+  },
+  "payment": {
+    "beneficiary_bank_name": "Филиал АО \"ForteBank\" в г. Алматы",
+    "beneficiary_bank_bik": "IRTYKZKA",
+    "beneficiary_account_iban": "KZ279650200008024418",
+    "beneficiary_bin_iin": "061040005628",
+    "kbe": "17",
+    "knp": "710",
+    "payment_code": null,
+    "payment_purpose": null
+  },
+  "barcodes": []
+}

@@ -1,0 +1,46 @@
+{
+  "document_type": "счет на оплату",
+  "iin_bin": "200140008545",
+  "company_name": "ТОО «Terra Alatau»",
+  "document_number": "ЦБ-22801",
+  "document_date": "17 сентября 2024 г.",
+  "subtotal": "70 000,00",
+  "vat": "7 500,00",
+  "total": "70 000,00",
+  "items": [
+    {
+      "name": "Монитор 22\" SAMSUNG LS22C310EAIXCI IPS, 1920x1080 (FHD), 75Hz, 5мс, 250 кд/м2, 1000:1, 1xHDMI 1x D-SUB, 16:9, Имееются режимы: сохранения зрения, игровой, поддержка Eco Saving Plus и FreeSync. Возможность крепления на стену. Класс энергосбережения A+",
+      "sku": "LS22C310E",
+      "quantity": "2",
+      "unit": "шт",
+      "price": "35 000,00",
+      "total": "70000.00"
+    }
+  ],
+  "error": null,
+  "page_number": 1,
+  "total_pages_processed": 1,
+  "supplier": {
+    "name": "ТОО «Terra Alatau»",
+    "bin_iin": "200140008545",
+    "address": "050061, РК, г. Алматы, Алатауский район, ул. Сахалинская, д. 19/13",
+    "phone": "2-22-00-91, 3-81-03-92, 3-81-07-60"
+  },
+  "buyer": {
+    "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+    "bin_iin": "170940023817",
+    "address": "",
+    "phone": "+7 (777) 5550016"
+  },
+  "payment": {
+    "beneficiary_bank_name": "АО \"Forte Bank\"",
+    "beneficiary_bank_bik": "IRTYKZKA",
+    "beneficiary_account_iban": "KZ3696502F0011962888",
+    "beneficiary_bin_iin": "200140008545",
+    "kbe": "17",
+    "knp": "710",
+    "payment_code": "ЗК2409TAЦБ0228010003",
+    "payment_purpose": "Оплата по заказу клиента №ЦБ-22801"
+  },
+  "barcodes": []
+}
