@@ -1,5 +1,5 @@
 {
-  "source_file": "invoices\\Счет на оплату № ЦБ-8461 от 22.09.2025.pdf",
+  "source_file": "invoices/Счет на оплату № ЦБ-8461 от 22.09.2025.pdf",
   "error": "",
   "result": {
     "pages": [
@@ -108,13 +108,13 @@
         "supplier": {
           "name": "Товарищество с ограниченной ответственностью \"Michael\"",
           "bin_iin": "170940023817",
-          "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1",
+          "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1, 113",
           "phone": "+7 (7187) 740864"
         },
         "buyer": {
           "name": "Товарищество с ограниченной ответственностью «Энерго Спец Строй»",
           "bin_iin": "100240001362",
-          "address": "Павлодарская обл., г. Экибастуз, промышленная зона ГРЭС-1, строение 57",
+          "address": "141200, РК, Павлодарская обл., г. Экибастуз, промышленная зона ГРЭС-1, строение 57",
           "phone": "+7 (747) 949 92 20, доб. +7 (7187) 34-15-32"
         },
         "payment": {
@@ -124,19 +124,30 @@
           "beneficiary_bin_iin": "170940023817",
           "kbe": "17",
           "knp": "710",
-          "payment_code": "ЗК250900ЦБ0084610004",
+          "payment_code": "Код ЗК250900ЦБ0084610004",
           "payment_purpose": "Оплата по заказу клиента №ЦБ-8461"
         },
         "barcodes": [
-          "4719331355081"
+          "4719331355081",
+          "ЦБ-00008848",
+          "ЦБ-00009986",
+          "ЦБ-00009987",
+          "ЦБ-00009988",
+          "ЦБ-00009989",
+          "ЦБ-00009990",
+          "ЦБ-00009991",
+          "ЦБ-00009992",
+          "ЦБ-00009993",
+          "ЦБ-00009994",
+          "ЦБ-00005524"
         ]
       },
       {
         "document_type": "unknown",
         "iin_bin": null,
         "company_name": "Michael",
-        "document_number": null,
-        "document_date": null,
+        "document_number": "",
+        "document_date": "",
         "subtotal": "",
         "vat": "",
         "total": "",
@@ -144,9 +155,26 @@
         "error": null,
         "page_number": 2,
         "total_pages_processed": 2,
-        "supplier": {},
-        "buyer": {},
-        "payment": {},
+        "supplier": {
+          "name": "",
+          "address": "",
+          "phone": ""
+        },
+        "buyer": {
+          "name": "",
+          "address": "",
+          "phone": ""
+        },
+        "payment": {
+          "beneficiary_bank_name": "",
+          "beneficiary_bank_bik": "",
+          "beneficiary_account_iban": "",
+          "kbe": "",
+          "knp": "",
+          "payment_code": "",
+          "payment_purpose": "",
+          "beneficiary_bin_iin": null
+        },
         "barcodes": []
       }
     ],

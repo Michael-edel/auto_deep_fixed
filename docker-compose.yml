@@ -1,0 +1,6 @@
+services:
+  app:
+    build: .
+    container_name: auto_deep_fixed_app
+    volumes:
+      - .:/app

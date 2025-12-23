@@ -1,5 +1,5 @@
 {
-  "source_file": "invoices\\Счет на оплату № ЦБ-11777 от 15.12.2025.pdf",
+  "source_file": "invoices/Счет на оплату № ЦБ-11777 от 15.12.2025.pdf",
   "error": "",
   "result": {
     "pages": [
@@ -46,7 +46,7 @@
           "phone": "+7 (702) 9485881"
         },
         "payment": {
-          "beneficiary_bank_name": "АО \"ForteBank\"",
+          "beneficiary_bank_name": "AO \"ForteBank\"",
           "beneficiary_bank_bik": "IRTYKZKA",
           "beneficiary_account_iban": "KZ0396506F0007735246",
           "beneficiary_bin_iin": "170940023817",

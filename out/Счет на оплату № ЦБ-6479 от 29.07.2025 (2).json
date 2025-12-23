@@ -1,5 +1,5 @@
 {
-  "source_file": "invoices\\Счет на оплату № ЦБ-6479 от 29.07.2025 (2).pdf",
+  "source_file": "invoices/Счет на оплату № ЦБ-6479 от 29.07.2025 (2).pdf",
   "error": "",
   "result": {
     "pages": [
@@ -44,8 +44,8 @@
           "beneficiary_bin_iin": "170940023817",
           "kbe": "17",
           "knp": "ЗК250700ЦБ0064790006",
-          "payment_code": "",
-          "payment_purpose": "Оплата по заказу клиента №ЦБ-6479"
+          "payment_purpose": "Оплата по заказу клиента №ЦБ-6479",
+          "payment_code": "ЗК250700ЦБ0064790006"
         },
         "barcodes": []
       }
