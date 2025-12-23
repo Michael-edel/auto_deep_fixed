@@ -2,6 +2,7 @@
 
 import json
 import logging
+import hashlib
 from pathlib import Path
 from typing import Dict, Any, List, Optional, Union
 
@@ -20,12 +21,48 @@ logger = logging.getLogger(__name__)
 PathLike = Union[str, Path]
 
 class DocumentProcessor:
-    def __init__(self, ai: AIClient, db: Database):
+    def __init__(self, ai: AIClient, db: Database, cache_dir: Optional[PathLike] = None):
         self.ai = ai
         self.db = db
         self.corrector = MathCorrector()
         self.validator = DocumentValidator()
         self.inv = InventoryManager(db)
+        
+        # Настройка кэша
+        if cache_dir is None:
+            cache_dir = Path("out/cache")
+        self.cache_dir = Path(cache_dir)
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+
+    def _compute_file_hash(self, file_path: Path) -> str:
+        """Вычислить SHA256 хеш файла."""
+        sha256 = hashlib.sha256()
+        with file_path.open("rb") as f:
+            for chunk in iter(lambda: f.read(8192), b""):
+                sha256.update(chunk)
+        return sha256.hexdigest()
+
+    def _get_cache_path(self, file_hash: str) -> Path:
+        """Получить путь к файлу кэша."""
+        return self.cache_dir / f"{file_hash}.json"
+
+    def _load_from_cache(self, cache_path: Path) -> Optional[Dict[str, Any]]:
+        """Загрузить результат из кэша."""
+        try:
+            if cache_path.exists():
+                with cache_path.open("r", encoding="utf-8") as f:
+                    return json.load(f)
+        except Exception as e:
+            logger.warning(f"Ошибка при загрузке кэша {cache_path}: {e}")
+        return None
+
+    def _save_to_cache(self, cache_path: Path, result: Dict[str, Any]) -> None:
+        """Сохранить результат в кэш."""
+        try:
+            with cache_path.open("w", encoding="utf-8") as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            logger.warning(f"Ошибка при сохранении кэша {cache_path}: {e}")
 
     def process_file(self, file_path: PathLike) -> Dict[str, Any]:
         p = Path(file_path)
@@ -41,6 +78,19 @@ class DocumentProcessor:
         if not p.is_file():
             raise ValueError(f"Путь '{p}' не является файлом")
 
+        # Вычисляем хеш файла для кэширования
+        file_hash = self._compute_file_hash(p)
+        cache_path = self._get_cache_path(file_hash)
+
+        # Пытаемся загрузить из кэша
+        cached_result = self._load_from_cache(cache_path)
+        if cached_result is not None:
+            logger.info(f"Cache hit: {p.name} (hash: {file_hash[:8]}...)")
+            return cached_result
+
+        logger.info(f"Cache miss: {p.name} (hash: {file_hash[:8]}...)")
+
+        # Обрабатываем файл как обычно
         if p.suffix.lower() == ".pdf":
             pages = pdf_to_pages(p)
             docs: List[Dict[str, Any]] = []
@@ -61,13 +111,17 @@ class DocumentProcessor:
                 except Exception:
                     pass
                 docs.append(page_dict)
-            return {"pages": docs, "total_pages": len(docs)}
+            result = {"pages": docs, "total_pages": len(docs)}
         else:
             page_text = ""
             img_bytes = p.read_bytes()
             doc = self.ai.analyze_document_sync(img_bytes, extra_text=page_text)
             doc = self.corrector.correct_document(doc)
-            return self._postprocess(doc).to_dict()
+            result = self._postprocess(doc).to_dict()
+
+        # Сохраняем результат в кэш
+        self._save_to_cache(cache_path, result)
+        return result
 
     def process_directory(self, dir_path: PathLike) -> Dict[str, Any]:
         """Обработать все поддерживаемые файлы в директории"""

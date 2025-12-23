@@ -3,6 +3,7 @@
 import base64
 import json
 import logging
+import threading
 from typing import Optional
 
 from openai import OpenAI, AsyncOpenAI
@@ -12,7 +13,7 @@ from models.document import DocumentData
 logger = logging.getLogger(__name__)
 
 class AIClient:
-    def __init__(self, api_key: str, model: str = "gpt-4o-mini"):
+    def __init__(self, api_key: str, model: str = "gpt-4o-mini", max_concurrency: int = 2):
         if not api_key:
             raise ValueError("OPENAI_API_KEY не указан")
 
@@ -23,8 +24,11 @@ class AIClient:
         self.model = model
         self.sync_client = OpenAI(api_key=api_key)
         self.async_client = AsyncOpenAI(api_key=api_key)
+        # Semaphore для ограничения одновременных запросов к OpenAI
+        self._semaphore = threading.Semaphore(max_concurrency)
 
-        logger.info("AIClient инициализирован (model=%s, key=%s...)", model, api_key[:10])
+        logger.info("AIClient инициализирован (model=%s, key=%s..., max_concurrency=%d)", 
+                   model, api_key[:10], max_concurrency)
 
     @staticmethod
     def _clean_api_key(api_key: str) -> str:
@@ -121,27 +125,29 @@ class AIClient:
             return DocumentData(document_type="unknown", error=self._format_error_message(e))
 
     def analyze_document_sync(self, image_bytes: bytes, extra_text: str | None = None) -> DocumentData:
-        try:
-            base64_image = self.encode_image(image_bytes)
-            response = self.sync_client.chat.completions.create(
-                model=self.model,
-                messages=[
-                    {
-                        "role": "user",
-                        "content": [
-                            {"type": "text", "text": self.get_document_prompt() + ("\n\nТекст страницы (для надежности):\n" + extra_text if extra_text else "")},
-                            {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}},
-                        ],
-                    }
-                ],
-                response_format={"type": "json_object"},
-            )
-            result_json = response.choices[0].message.content
-            result_dict = json.loads(result_json)
-            return DocumentData.from_dict(result_dict)
-        except Exception as e:
-            logger.error("Ошибка при синхронном анализе документа: %s", e, exc_info=True)
-            return DocumentData(document_type="unknown", error=self._format_error_message(e))
+        # Ограничение одновременных запросов к OpenAI
+        with self._semaphore:
+            try:
+                base64_image = self.encode_image(image_bytes)
+                response = self.sync_client.chat.completions.create(
+                    model=self.model,
+                    messages=[
+                        {
+                            "role": "user",
+                            "content": [
+                                {"type": "text", "text": self.get_document_prompt() + ("\n\nТекст страницы (для надежности):\n" + extra_text if extra_text else "")},
+                                {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}},
+                            ],
+                        }
+                    ],
+                    response_format={"type": "json_object"},
+                )
+                result_json = response.choices[0].message.content
+                result_dict = json.loads(result_json)
+                return DocumentData.from_dict(result_dict)
+            except Exception as e:
+                logger.error("Ошибка при синхронном анализе документа: %s", e, exc_info=True)
+                return DocumentData(document_type="unknown", error=self._format_error_message(e))
 
     @staticmethod
     def _format_error_message(error: Exception) -> str:

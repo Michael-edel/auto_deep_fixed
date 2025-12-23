@@ -12,6 +12,8 @@ class Settings:
     telegram_bot_token: Optional[str] = None
     db_path: str = "inventory.db"
     openai_model: str = "gpt-4o-mini"
+    max_workers: int = 3
+    max_openai_concurrency: int = 2
 
 def load_settings(env_path: str = ".env") -> Settings:
     """Загрузка настроек из .env и переменных окружения."""
@@ -24,4 +26,6 @@ def load_settings(env_path: str = ".env") -> Settings:
         telegram_bot_token=os.getenv("TELEGRAM_BOT_TOKEN", "").strip() or None,
         db_path=os.getenv("DB_PATH", "inventory.db").strip(),
         openai_model=os.getenv("OPENAI_MODEL", "gpt-4o-mini").strip(),
+        max_workers=int(os.getenv("MAX_WORKERS", "3")),
+        max_openai_concurrency=int(os.getenv("MAX_OPENAI_CONCURRENCY", "2")),
     )

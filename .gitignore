@@ -161,6 +161,7 @@ dmypy.json
 cython_debug/
 invoices/
 out/
+out/cache/
 .venv/
 .env
 *.db

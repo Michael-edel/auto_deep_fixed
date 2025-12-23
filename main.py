@@ -5,6 +5,7 @@ import argparse
 import json
 import re
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from utils.logger import setup_logging
 from utils.config import load_settings
@@ -32,6 +33,26 @@ def _iter_input_files(p: Path):
     raise FileNotFoundError(f"Не найдено: {p}")
 
 
+def _process_single_file(processor: DocumentProcessor, file_path: Path, out_dir: Path):
+    """Обработать один файл и вернуть результат."""
+    try:
+        result = processor.process_file(file_path)
+        error = ""
+    except Exception as e:
+        result = None
+        error = f"{type(e).__name__}: {e}"
+
+    per_name = _safe_name(file_path.stem) + ".json"
+    per_path = out_dir / per_name
+
+    payload = {"source_file": str(file_path), "error": error, "result": result}
+
+    with per_path.open("w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+
+    return payload
+
+
 def main():
     parser = argparse.ArgumentParser(description="Распознавание документов (JPG/PNG/PDF) -> JSON")
     parser.add_argument("file", help="Путь к файлу (jpg/png/pdf) ИЛИ папке с файлами")
@@ -42,7 +63,11 @@ def main():
     setup_logging(args.log_level)
 
     settings = load_settings()
-    ai = AIClient(api_key=settings.openai_api_key, model=settings.openai_model)
+    ai = AIClient(
+        api_key=settings.openai_api_key, 
+        model=settings.openai_model,
+        max_concurrency=settings.max_openai_concurrency
+    )
     db = Database(settings.db_path)
     processor = DocumentProcessor(ai=ai, db=db)
 
@@ -64,23 +89,34 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     documents = []
-    for fp in files:
-        try:
-            result = processor.process_file(fp)
-            error = ""
-        except Exception as e:
-            result = None
-            error = f"{type(e).__name__}: {e}"
-
-        per_name = _safe_name(fp.stem) + ".json"
-        per_path = out_dir / per_name
-
-        payload = {"source_file": str(fp), "error": error, "result": result}
-
-        with per_path.open("w", encoding="utf-8") as f:
-            json.dump(payload, f, ensure_ascii=False, indent=2)
-
-        documents.append(payload)
+    
+    # Параллельная обработка файлов
+    max_workers = settings.max_workers
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Запускаем обработку всех файлов
+        future_to_file = {
+            executor.submit(_process_single_file, processor, fp, out_dir): fp 
+            for fp in files
+        }
+        
+        # Собираем результаты по мере завершения
+        for future in as_completed(future_to_file):
+            file_path = future_to_file[future]
+            try:
+                payload = future.result()
+                documents.append(payload)
+            except Exception as e:
+                # Если произошла ошибка при обработке
+                per_name = _safe_name(file_path.stem) + ".json"
+                per_path = out_dir / per_name
+                payload = {
+                    "source_file": str(file_path), 
+                    "error": f"{type(e).__name__}: {e}", 
+                    "result": None
+                }
+                with per_path.open("w", encoding="utf-8") as f:
+                    json.dump(payload, f, ensure_ascii=False, indent=2)
+                documents.append(payload)
 
     summary_path = out_dir / "result_all.json"
     summary = {"input": str(in_path), "count": len(files), "documents": documents}
