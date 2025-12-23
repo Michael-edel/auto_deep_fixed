@@ -1,0 +1,7 @@
+openai>=1.40.0
+python-dotenv>=1.0.1
+requests>=2.31.0
+python-telegram-bot>=20.6
+pymupdf>=1.23.0
+pillow>=10.0.0
+zxing-cpp>=0.1.9

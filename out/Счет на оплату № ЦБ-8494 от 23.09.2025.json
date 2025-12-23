@@ -1,0 +1,55 @@
+{
+  "source_file": "invoices\\Счет на оплату № ЦБ-8494 от 23.09.2025.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "170940023817",
+        "company_name": "Товарищество с ограниченной ответственностью \"Michael\"",
+        "document_number": "ЦБ-8494",
+        "document_date": "23 сентября 2025 г.",
+        "subtotal": "61900,00",
+        "vat": "6632,14",
+        "total": "61900,00",
+        "items": [
+          {
+            "name": "ИБП, SVC, V-1200-F-LCD, Smart, USB, Диапазон работы AVR: 165-275В, Бат.: 12В/7.5 Ач*2шт., 3 вых.: Shuko CEE7., Защита тел. линии, Чёрный",
+            "sku": "00-00000153",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "61900,00",
+            "total": "61900.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+          "bin_iin": "170940023817",
+          "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1, 113",
+          "phone": "+7 (7187) 740864"
+        },
+        "buyer": {
+          "name": "Индивидуальный предприниматель \"Меркурий\"",
+          "bin_iin": "030821550028",
+          "address": "Республика Казахстан, Павлодарская область, город Экибастуз, ул. Энергетиков 83А",
+          "phone": "+7 (775) 1279017"
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"ForteBank\"",
+          "beneficiary_bank_bik": "IRTYKZKA",
+          "beneficiary_account_iban": "KZ0396506F0007735246",
+          "beneficiary_bin_iin": "170940023817",
+          "kbe": "17",
+          "knp": "710",
+          "payment_code": "ЗК250900ЦБ0084940004",
+          "payment_purpose": "Оплата по заказу клиента №ЦБ-8494"
+        },
+        "barcodes": []
+      }
+    ],
+    "total_pages": 1
+  }
+}

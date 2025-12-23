@@ -1,0 +1,723 @@
+{
+  "input": "invoices",
+  "count": 9,
+  "documents": [
+    {
+      "source_file": "invoices\\Счет на оплату № ЦБ-11777 от 15.12.2025.pdf",
+      "error": "",
+      "result": {
+        "pages": [
+          {
+            "document_type": "счет на оплату",
+            "iin_bin": "170940023817",
+            "company_name": "Товарищество с ограниченной ответственностью \"Michael\"",
+            "document_number": "ЦБ-11777",
+            "document_date": "15 декабря 2025 г.",
+            "subtotal": "30 900,00",
+            "vat": "3 310,71",
+            "total": "30 900,00",
+            "items": [
+              {
+                "name": "Напольный кабельный канал CKK30-070-016-3 ИЭК",
+                "sku": "00-00000296",
+                "quantity": "3",
+                "unit": "шт",
+                "price": "4 900,00",
+                "total": "14700.00"
+              },
+              {
+                "name": "Светильник светодиодный ДПО-108 36Вт 4000К IP40 3420лм 1200мм 230В NEOX",
+                "sku": "ЦБ-00007664",
+                "quantity": "6",
+                "unit": "шт",
+                "price": "2 700,00",
+                "total": "16200.00"
+              }
+            ],
+            "error": null,
+            "page_number": 1,
+            "total_pages_processed": 1,
+            "supplier": {
+              "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+              "bin_iin": "170940023817",
+              "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1",
+              "phone": "+7 (7187) 740864"
+            },
+            "buyer": {
+              "name": "Товарищество с ограниченной ответственностью \"GermannCN\"",
+              "bin_iin": "230440033483",
+              "address": "Республика Казахстан, г. Караганда, ул. Сарыарка, строение 37/2",
+              "phone": "+7 (702) 9485881"
+            },
+            "payment": {
+              "beneficiary_bank_name": "АО \"ForteBank\"",
+              "beneficiary_bank_bik": "IRTYKZKA",
+              "beneficiary_account_iban": "KZ0396506F0007735246",
+              "beneficiary_bin_iin": "170940023817",
+              "kbe": "17",
+              "knp": "ЗК251200ЦБ0117770001",
+              "payment_purpose": "Оплата по заказу клиента №ЦБ-11777",
+              "payment_code": "ЗК251200ЦБ0117770001"
+            },
+            "barcodes": [
+              "4690612039183"
+            ]
+          }
+        ],
+        "total_pages": 1
+      }
+    },
+    {
+      "source_file": "invoices\\Счет на оплату № ЦБ-6314 от 24.07.2025 (2).pdf",
+      "error": "",
+      "result": {
+        "pages": [
+          {
+            "document_type": "счет на оплату",
+            "iin_bin": "170940023817",
+            "company_name": "Товарищество с ограниченной ответственностью \"Michael\"",
+            "document_number": "ЦБ-6314",
+            "document_date": "24 июля 2025 г.",
+            "subtotal": "151 200,00",
+            "vat": "16 200,00",
+            "total": "151 200,00",
+            "items": [
+              {
+                "name": "Кабель КГ 1*50",
+                "sku": "ЦБ-00003908",
+                "quantity": "20",
+                "unit": "м",
+                "price": "3 750,00",
+                "total": "75000.00"
+              },
+              {
+                "name": "Кабель КГ 3*16+1*10",
+                "sku": "ЦБ-00005588",
+                "quantity": "15",
+                "unit": "м",
+                "price": "5 080,00",
+                "total": "76200.00"
+              }
+            ],
+            "error": null,
+            "page_number": 1,
+            "total_pages_processed": 1,
+            "supplier": {
+              "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+              "bin_iin": "170940023817",
+              "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1, 113",
+              "phone": "+7 (7187) 740864"
+            },
+            "buyer": {
+              "name": "Филиал товарищества с ограниченной ответственностью \"Деповской сервис\" в городе Экибастуз",
+              "bin_iin": "250241025741",
+              "address": "141200, Павлодарская область, город Экибастуз, пр. имени Д.А.Кунаева, ст-е 87",
+              "phone": ""
+            },
+            "payment": {
+              "beneficiary_bank_name": "АО \"ForteBank\"",
+              "beneficiary_bank_bik": "IRTYKZKA",
+              "beneficiary_account_iban": "KZ0396506F0007735246",
+              "beneficiary_bin_iin": "170940023817",
+              "kbe": "17",
+              "knp": "ЗК250700ЦБ0063140008",
+              "payment_code": "",
+              "payment_purpose": "Оплата по заказу клиента №ЦБ-6314"
+            },
+            "barcodes": []
+          }
+        ],
+        "total_pages": 1
+      }
+    },
+    {
+      "source_file": "invoices\\Счет на оплату № ЦБ-6479 от 29.07.2025 (2).pdf",
+      "error": "",
+      "result": {
+        "pages": [
+          {
+            "document_type": "счет на оплату",
+            "iin_bin": "170940023817",
+            "company_name": "Товарищество с ограниченной ответственностью \"Michael\"",
+            "document_number": "ЦБ-6479",
+            "document_date": "29 июля 2025 г.",
+            "subtotal": "10 400,00",
+            "vat": "1 114,29",
+            "total": "10 400,00",
+            "items": [
+              {
+                "name": "Вилка 025 3Р+РЕ+N 32A 380B IP44",
+                "sku": "ЦБ-00002412",
+                "quantity": "4",
+                "unit": "шт",
+                "price": "2 600,00",
+                "total": "10400.00"
+              }
+            ],
+            "error": null,
+            "page_number": 1,
+            "total_pages_processed": 1,
+            "supplier": {
+              "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+              "bin_iin": "170940023817",
+              "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1, 113",
+              "phone": "+7 (7187) 740864"
+            },
+            "buyer": {
+              "name": "Филиал товарищества с ограниченной ответственностью \"Деповской сервис\" в городе Экибастуз",
+              "bin_iin": "250241025741",
+              "address": "141200, Павлодарская область, город Экибастуз, пр. имени Д.А.Кунаева, ст-е 87",
+              "phone": ""
+            },
+            "payment": {
+              "beneficiary_bank_name": "АО \"ForteBank\"",
+              "beneficiary_bank_bik": "IRTYKZKA",
+              "beneficiary_account_iban": "KZ0396506F0007735246",
+              "beneficiary_bin_iin": "170940023817",
+              "kbe": "17",
+              "knp": "ЗК250700ЦБ0064790006",
+              "payment_code": "",
+              "payment_purpose": "Оплата по заказу клиента №ЦБ-6479"
+            },
+            "barcodes": []
+          }
+        ],
+        "total_pages": 1
+      }
+    },
+    {
+      "source_file": "invoices\\Счет на оплату № ЦБ-8461 от 22.09.2025.pdf",
+      "error": "",
+      "result": {
+        "pages": [
+          {
+            "document_type": "счет на оплату",
+            "iin_bin": "170940023817",
+            "company_name": "Товарищество с ограниченной ответственностью \"Michael\"",
+            "document_number": "ЦБ-8461",
+            "document_date": "22 сентября 2025 г.",
+            "subtotal": "383 990,00",
+            "vat": "41 141,78",
+            "total": "383 990,00",
+            "items": [
+              {
+                "name": "Комплект Клавиатура + Мышь, Rapoo, X1960, Беспроводная 2.4G, 1000DPI, Нано-ресивер, Кол-во стандартных клавиш 104, Англ/Рус, Чёрный",
+                "sku": "ЦБ-00009986",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "8 000,00",
+                "total": "8000.00"
+              },
+              {
+                "name": "Твердотельный накопитель SSD, Apacer, AS2280P4 AP1TBAS2280P4, 1000 GB, M.2 NVMe PCIe 3.0x4, 3000/2000 Мб/с BULK",
+                "sku": "ЦБ-00009987",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "36 800,00",
+                "total": "36800.00"
+              },
+              {
+                "name": "Процессор, AMD, AM4 Ryzen 5 5500, оем, 3М L2 + 16M L3, 3.6 GHz, 6/12 Core, 65 Вт, без встроенного видео",
+                "sku": "ЦБ-00009989",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "38 900,00",
+                "total": "38900.00"
+              },
+              {
+                "name": "Материнская плата MaxSun Challenger A620A 2.5G, AM5, 2xDDR5, PCIe4.0, HDMI+VGA, 1xM.2, 2.5G LAN,mATX",
+                "sku": "ЦБ-00009988",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "45 320,00",
+                "total": "45320.00"
+              },
+              {
+                "name": "Корпус PCCooler C3 B310 BK mATX/ITX USB3.0, 2xUSB2.0 Black",
+                "sku": "ЦБ-00009990",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "15 200,00",
+                "total": "15200.00"
+              },
+              {
+                "name": "Блок питания PCCooler HW700-NPБлок питания PCCooler HW700-NP, 700W, Non Modular, 80+, Fan 120mm, HW700-NP",
+                "sku": "ЦБ-00009991",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "19 735,00",
+                "total": "19735.00"
+              },
+              {
+                "name": "Вентилятор для процессора PCCooler R400 TDP 180W 4-pin LGA S115X/1200/1700/AM4/AM5 Размер: 95*88*133 мм. 28.3dBA±10% Цвет: Черный, R400",
+                "sku": "ЦБ-00009992",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "6 250,00",
+                "total": "6250.00"
+              },
+              {
+                "name": "Оперативная память 16GB DDR5 5200MHz NOMAD UDIMM CL42 NMD5200D5U42-16GB Bulk Pack",
+                "sku": "ЦБ-00009993",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "26 625,00",
+                "total": "26625.00"
+              },
+              {
+                "name": "Видеокарта, Gigabyte, RTX3050 WINDFORCE OC V2 6G (4719331355081), (GV-N3050WF2OCV2-6GD), GDDR6, 96bit, 2-HDMI, 2-DP, Windforce 2X Fan, 191*111*36 мм, Цветная коробка",
+                "sku": "ЦБ-00009994",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "118 960,00",
+                "total": "118960.00"
+              },
+              {
+                "name": "Монитор, Samsung, S3 LS27D364GAIXCI, Изогнутый, 27\", 1920 x 1080, VA, 100 Гц, VGA*1, HDMI*1, 3000:1, 250 кд/м², 4 мс, 75x75, 16:9, Черный",
+                "sku": "ЦБ-00008848",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "65 000,00",
+                "total": "65000.00"
+              },
+              {
+                "name": "Сетевой фильтр, SVC, ZC6S-30M, 6 розеток, 3 метра, 220-250В, 10A, картонная коробка, чёрный",
+                "sku": "ЦБ-00005524",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "3 200,00",
+                "total": "3200.00"
+              }
+            ],
+            "error": null,
+            "page_number": 1,
+            "total_pages_processed": 2,
+            "supplier": {
+              "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+              "bin_iin": "170940023817",
+              "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1",
+              "phone": "+7 (7187) 740864"
+            },
+            "buyer": {
+              "name": "Товарищество с ограниченной ответственностью «Энерго Спец Строй»",
+              "bin_iin": "100240001362",
+              "address": "Павлодарская обл., г. Экибастуз, промышленная зона ГРЭС-1, строение 57",
+              "phone": "+7 (747) 949 92 20, доб. +7 (7187) 34-15-32"
+            },
+            "payment": {
+              "beneficiary_bank_name": "АО \"ForteBank\"",
+              "beneficiary_bank_bik": "IRTYKZKA",
+              "beneficiary_account_iban": "KZ0396506F0007735246",
+              "beneficiary_bin_iin": "170940023817",
+              "kbe": "17",
+              "knp": "710",
+              "payment_code": "ЗК250900ЦБ0084610004",
+              "payment_purpose": "Оплата по заказу клиента №ЦБ-8461"
+            },
+            "barcodes": [
+              "4719331355081"
+            ]
+          },
+          {
+            "document_type": "unknown",
+            "iin_bin": null,
+            "company_name": "Michael",
+            "document_number": null,
+            "document_date": null,
+            "subtotal": "",
+            "vat": "",
+            "total": "",
+            "items": [],
+            "error": null,
+            "page_number": 2,
+            "total_pages_processed": 2,
+            "supplier": {},
+            "buyer": {},
+            "payment": {},
+            "barcodes": []
+          }
+        ],
+        "total_pages": 2
+      }
+    },
+    {
+      "source_file": "invoices\\Счет на оплату № ЦБ-8480 от 23.09.2025.pdf",
+      "error": "",
+      "result": {
+        "pages": [
+          {
+            "document_type": "счет на оплату",
+            "iin_bin": "170940023817",
+            "company_name": "Товарищество с ограниченной ответственностью \"Michael\"",
+            "document_number": "ЦБ-8480",
+            "document_date": "23 сентября 2025 г.",
+            "subtotal": "65590,00",
+            "vat": "7027,49",
+            "total": "65590,00",
+            "items": [
+              {
+                "name": "Зажим для стальных канатов - М3, оцинк.",
+                "sku": "ЦБ-00008722",
+                "quantity": "12",
+                "unit": "шт",
+                "price": "60,00",
+                "total": "720.00"
+              },
+              {
+                "name": "Трос для растяжки - 2мм. (6х7+FC) DIN3055-з",
+                "sku": "ЦБ-00005886",
+                "quantity": "200",
+                "unit": "м",
+                "price": "60,00",
+                "total": "12000.00"
+              },
+              {
+                "name": "Кронштейн анкерный КАБ-200 (CAВ 25, CA 16) TDM",
+                "sku": "ЦБ-00009604",
+                "quantity": "12",
+                "unit": "шт",
+                "price": "220,00",
+                "total": "2640.00"
+              },
+              {
+                "name": "Талреп М6 крюк-кольцо",
+                "sku": "ЦБ-00005723",
+                "quantity": "12",
+                "unit": "шт",
+                "price": "400,00",
+                "total": "4800.00"
+              },
+              {
+                "name": "Саморез оконный, со сверлом, 3,9х16, желтопассированный",
+                "sku": "ЦБ-00005977",
+                "quantity": "50",
+                "unit": "шт",
+                "price": "3,00",
+                "total": "150.00"
+              },
+              {
+                "name": "Выключатель автоматический модульный 1п B 10А 4.5кА ВА47-29 IEK MVA20-1-010-B",
+                "sku": "ЦБ-00007195",
+                "quantity": "6",
+                "unit": "шт",
+                "price": "1300,00",
+                "total": "7800.00"
+              },
+              {
+                "name": "Розетка РА16-264",
+                "sku": "ЦБ-00006109",
+                "quantity": "6",
+                "unit": "шт",
+                "price": "2000,00",
+                "total": "12000.00"
+              },
+              {
+                "name": "Кабель КГ 2*0,75",
+                "sku": "ЦБ-00003785",
+                "quantity": "20",
+                "unit": "м",
+                "price": "340,00",
+                "total": "6800.00"
+              },
+              {
+                "name": "Хомут 2,5*150 мм нейлон, белый",
+                "sku": "ЦБ-00007571",
+                "quantity": "10",
+                "unit": "упак",
+                "price": "400,00",
+                "total": "4000.00"
+              },
+              {
+                "name": "Хомут 2,5*200 мм нейлон (белый, черный)",
+                "sku": "ЦБ-00000447",
+                "quantity": "10",
+                "unit": "упак",
+                "price": "560,00",
+                "total": "5600.00"
+              },
+              {
+                "name": "Дюбель-хомут 5-10 белый",
+                "sku": "ЦБ-00000859",
+                "quantity": "10",
+                "unit": "упак",
+                "price": "580,00",
+                "total": "5800.00"
+              },
+              {
+                "name": "Сверло по металлу прямое STD-4",
+                "sku": "ЦБ-00007342",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "320,00",
+                "total": "320.00"
+              },
+              {
+                "name": "Сверла SDS+DBC- 6-110",
+                "sku": "ЦБ-00005272",
+                "quantity": "4",
+                "unit": "шт",
+                "price": "490,00",
+                "total": "1960.00"
+              },
+              {
+                "name": "Сверла SDS+DBC- 5-160",
+                "sku": "ЦБ-00005271",
+                "quantity": "2",
+                "unit": "шт",
+                "price": "500,00",
+                "total": "1000.00"
+              }
+            ],
+            "error": null,
+            "page_number": 1,
+            "total_pages_processed": 1,
+            "supplier": {
+              "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+              "bin_iin": "170940023817",
+              "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1, 113",
+              "phone": "+7 (7187) 740864"
+            },
+            "buyer": {
+              "name": "Товарищество с ограниченной ответственностью \"Grappa-STROY\"",
+              "bin_iin": "040940010185",
+              "address": "140013, Республика Казахстан, Павлодарская обл. г.Павлодар, ул. Ломова 180/3",
+              "phone": "+77778563003"
+            },
+            "payment": {
+              "beneficiary_bank_name": "АО \"ForteBank\"",
+              "beneficiary_bank_bik": "IRTYKZKA",
+              "beneficiary_account_iban": "KZ0396506F0007735246",
+              "beneficiary_bin_iin": "170940023817",
+              "kbe": "17",
+              "knp": "710",
+              "payment_code": "ЗК250900ЦБ0084800008",
+              "payment_purpose": "Оплата по заказу клиента №ЦБ-8480"
+            },
+            "barcodes": []
+          }
+        ],
+        "total_pages": 1
+      }
+    },
+    {
+      "source_file": "invoices\\Счет на оплату № ЦБ-8494 от 23.09.2025.pdf",
+      "error": "",
+      "result": {
+        "pages": [
+          {
+            "document_type": "счет на оплату",
+            "iin_bin": "170940023817",
+            "company_name": "Товарищество с ограниченной ответственностью \"Michael\"",
+            "document_number": "ЦБ-8494",
+            "document_date": "23 сентября 2025 г.",
+            "subtotal": "61900,00",
+            "vat": "6632,14",
+            "total": "61900,00",
+            "items": [
+              {
+                "name": "ИБП, SVC, V-1200-F-LCD, Smart, USB, Диапазон работы AVR: 165-275В, Бат.: 12В/7.5 Ач*2шт., 3 вых.: Shuko CEE7., Защита тел. линии, Чёрный",
+                "sku": "00-00000153",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "61900,00",
+                "total": "61900.00"
+              }
+            ],
+            "error": null,
+            "page_number": 1,
+            "total_pages_processed": 1,
+            "supplier": {
+              "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+              "bin_iin": "170940023817",
+              "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1, 113",
+              "phone": "+7 (7187) 740864"
+            },
+            "buyer": {
+              "name": "Индивидуальный предприниматель \"Меркурий\"",
+              "bin_iin": "030821550028",
+              "address": "Республика Казахстан, Павлодарская область, город Экибастуз, ул. Энергетиков 83А",
+              "phone": "+7 (775) 1279017"
+            },
+            "payment": {
+              "beneficiary_bank_name": "АО \"ForteBank\"",
+              "beneficiary_bank_bik": "IRTYKZKA",
+              "beneficiary_account_iban": "KZ0396506F0007735246",
+              "beneficiary_bin_iin": "170940023817",
+              "kbe": "17",
+              "knp": "710",
+              "payment_code": "ЗК250900ЦБ0084940004",
+              "payment_purpose": "Оплата по заказу клиента №ЦБ-8494"
+            },
+            "barcodes": []
+          }
+        ],
+        "total_pages": 1
+      }
+    },
+    {
+      "source_file": "invoices\\Счет на оплату № ЦБ-8525 от 24.09.2025 (2).pdf",
+      "error": "",
+      "result": {
+        "pages": [
+          {
+            "document_type": "счет на оплату",
+            "iin_bin": "170940023817",
+            "company_name": "ТОО Michael",
+            "document_number": "ЦБ-8525",
+            "document_date": "24 сентября 2025 г.",
+            "subtotal": "92 800,00",
+            "vat": "9 942,86",
+            "total": "92 800,00",
+            "items": [
+              {
+                "name": "Точка доступа, MikroTik, L22UGS-5HaxD2HaxD-15S, mANTBox ax 15s, 1x2.5Gigabit SFP port, 1xGigabit LAN PoE in Passive PoE, USB type A, USB, RouterOS, Gigabit PoE injector, 802.11a/b/g/n/ac/ax, AX3000, -40°C to 70°C",
+                "sku": "ЦБ-00009692",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "92 800,00",
+                "total": "92800.00"
+              }
+            ],
+            "error": null,
+            "page_number": 1,
+            "total_pages_processed": 1,
+            "supplier": {
+              "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+              "bin_iin": "170940023817",
+              "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1, 113",
+              "phone": "+7 (7187) 740864"
+            },
+            "buyer": {
+              "name": "Товарищество с ограниченной ответственностью \"EkibastuzFerroAlloys\"",
+              "bin_iin": "210440041282",
+              "address": "141203, Республика Казахстан, Павлодарская область, город Экибастуз, улица Желтоксан 12",
+              "phone": "+7 (776) 6916161"
+            },
+            "payment": {
+              "beneficiary_bank_name": "АО \"ForteBank\"",
+              "beneficiary_bank_bik": "IRTYKZKA",
+              "beneficiary_account_iban": "KZ0396506F0007735246",
+              "beneficiary_bin_iin": "170940023817",
+              "kbe": "17",
+              "knp": "710",
+              "payment_code": "ЗК250900ЦБ0085250001",
+              "payment_purpose": "Оплата по заказу клиента №ЦБ-8525"
+            },
+            "barcodes": []
+          }
+        ],
+        "total_pages": 1
+      }
+    },
+    {
+      "source_file": "invoices\\Счет на оплату № ЦБ-8525 от 24.09.2025 (3).pdf",
+      "error": "",
+      "result": {
+        "pages": [
+          {
+            "document_type": "счет на оплату",
+            "iin_bin": "170940023817",
+            "company_name": "ТОО Michael",
+            "document_number": "ЦБ-8525",
+            "document_date": "24 сентября 2025 г.",
+            "subtotal": "92 800,00",
+            "vat": "9 942,86",
+            "total": "92 800,00",
+            "items": [
+              {
+                "name": "Точка доступа, MikroTik, L22UGS-5HaxD2HaxD-15S, mANTBox ax 15s, 1x2.5Gigabit SFP port, 1xGigabit LAN PoE in Passive PoE, USB type A, USB, RouterOS, Gigabit PoE injector, 802.11a/b/g/n/ac/ax, AX3000, -40°C to 70°C",
+                "sku": "ЦБ-00009692",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "92 800,00",
+                "total": "92800.00"
+              }
+            ],
+            "error": null,
+            "page_number": 1,
+            "total_pages_processed": 1,
+            "supplier": {
+              "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+              "bin_iin": "170940023817",
+              "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1, 113",
+              "phone": "+7 (7187) 740864"
+            },
+            "buyer": {
+              "name": "Товарищество с ограниченной ответственностью \"EkibastuzFerroAlloys\"",
+              "bin_iin": "210440041282",
+              "address": "141203, Республика Казахстан, Павлодарская область, город Экибастуз, улица Желтоксан 12",
+              "phone": "+7 (776) 6916161"
+            },
+            "payment": {
+              "beneficiary_bank_name": "АО \"ForteBank\"",
+              "beneficiary_bank_bik": "IRTYKZKA",
+              "beneficiary_account_iban": "KZ0396506F0007735246",
+              "beneficiary_bin_iin": "170940023817",
+              "kbe": "17",
+              "knp": "710",
+              "payment_code": "ЗК250900ЦБ0085250001",
+              "payment_purpose": "Оплата по заказу клиента №ЦБ-8525"
+            },
+            "barcodes": []
+          }
+        ],
+        "total_pages": 1
+      }
+    },
+    {
+      "source_file": "invoices\\Счет на оплату № ЦБ-8525 от 24.09.2025.pdf",
+      "error": "",
+      "result": {
+        "pages": [
+          {
+            "document_type": "счет на оплату",
+            "iin_bin": "170940023817",
+            "company_name": "Товарищество с ограниченной ответственностью \"Michael\"",
+            "document_number": "ЦБ-8525",
+            "document_date": "24 сентября 2025 г.",
+            "subtotal": "92 800,00",
+            "vat": "9 942,86",
+            "total": "92 800,00",
+            "items": [
+              {
+                "name": "Точка доступа, MikroTik, L22UGS-5HaxD2HaxD-15S, mANTBox ax 15s, 1x2.5Gigabit SFP port, 1xGigabit LAN PoE in Passive PoE, USB type A, USB, RouterOS, Gigabit PoE injector, 802.11a/b/g/n/ac/ax, AX3000, -40°C to 70°C",
+                "sku": "ЦБ-00009692",
+                "quantity": "1",
+                "unit": "шт",
+                "price": "92 800,00",
+                "total": "92800.00"
+              }
+            ],
+            "error": null,
+            "page_number": 1,
+            "total_pages_processed": 1,
+            "supplier": {
+              "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+              "bin_iin": "170940023817",
+              "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1, 113",
+              "phone": "+7 (7187) 740864"
+            },
+            "buyer": {
+              "name": "Товарищество с ограниченной ответственностью \"EkibastuzFerroAlloys\"",
+              "bin_iin": "210440041282",
+              "address": "Республика Казахстан, Павлодарская область, город Экибастуз, улица Желтоксан 12",
+              "phone": "+7 (776) 6916161"
+            },
+            "payment": {
+              "beneficiary_bank_name": "АО \"ForteBank\"",
+              "beneficiary_bank_bik": "IRTYKZKA",
+              "beneficiary_account_iban": "KZ0396506F0007735246",
+              "beneficiary_bin_iin": "170940023817",
+              "kbe": "17",
+              "knp": "710",
+              "payment_code": "ЗК250900ЦБ0085250001",
+              "payment_purpose": "Оплата по заказу клиента №ЦБ-8525"
+            },
+            "barcodes": []
+          }
+        ],
+        "total_pages": 1
+      }
+    }
+  ]
+}

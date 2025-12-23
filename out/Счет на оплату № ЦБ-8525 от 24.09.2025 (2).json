@@ -1,0 +1,55 @@
+{
+  "source_file": "invoices\\Счет на оплату № ЦБ-8525 от 24.09.2025 (2).pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "170940023817",
+        "company_name": "ТОО Michael",
+        "document_number": "ЦБ-8525",
+        "document_date": "24 сентября 2025 г.",
+        "subtotal": "92 800,00",
+        "vat": "9 942,86",
+        "total": "92 800,00",
+        "items": [
+          {
+            "name": "Точка доступа, MikroTik, L22UGS-5HaxD2HaxD-15S, mANTBox ax 15s, 1x2.5Gigabit SFP port, 1xGigabit LAN PoE in Passive PoE, USB type A, USB, RouterOS, Gigabit PoE injector, 802.11a/b/g/n/ac/ax, AX3000, -40°C to 70°C",
+            "sku": "ЦБ-00009692",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "92 800,00",
+            "total": "92800.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+          "bin_iin": "170940023817",
+          "address": "Павлодарская обл., г.Экибастуз, ул.Абая, № 60/1, 113",
+          "phone": "+7 (7187) 740864"
+        },
+        "buyer": {
+          "name": "Товарищество с ограниченной ответственностью \"EkibastuzFerroAlloys\"",
+          "bin_iin": "210440041282",
+          "address": "141203, Республика Казахстан, Павлодарская область, город Экибастуз, улица Желтоксан 12",
+          "phone": "+7 (776) 6916161"
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"ForteBank\"",
+          "beneficiary_bank_bik": "IRTYKZKA",
+          "beneficiary_account_iban": "KZ0396506F0007735246",
+          "beneficiary_bin_iin": "170940023817",
+          "kbe": "17",
+          "knp": "710",
+          "payment_code": "ЗК250900ЦБ0085250001",
+          "payment_purpose": "Оплата по заказу клиента №ЦБ-8525"
+        },
+        "barcodes": []
+      }
+    ],
+    "total_pages": 1
+  }
+}

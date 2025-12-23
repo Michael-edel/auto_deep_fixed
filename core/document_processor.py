@@ -1,0 +1,140 @@
+"""Обработка файлов документов (jpg/png/pdf) -> JSON."""
+
+import json
+import logging
+from pathlib import Path
+from typing import Dict, Any, List, Optional, Union
+
+from core.ai_client import AIClient
+from core.math_corrector import MathCorrector
+from utils.validators import DocumentValidator
+from utils.extractors import merge_invoice_fields
+from integrations.pdf_processor import pdf_to_pages
+from integrations.barcode_reader import decode_barcodes_from_pil
+from models.document import DocumentData, DocumentItem
+from storage.database import Database
+from core.inventory_manager import InventoryManager
+
+logger = logging.getLogger(__name__)
+
+PathLike = Union[str, Path]
+
+class DocumentProcessor:
+    def __init__(self, ai: AIClient, db: Database):
+        self.ai = ai
+        self.db = db
+        self.corrector = MathCorrector()
+        self.validator = DocumentValidator()
+        self.inv = InventoryManager(db)
+
+    def process_file(self, file_path: PathLike) -> Dict[str, Any]:
+        p = Path(file_path)
+        if not p.exists():
+            raise FileNotFoundError(str(p))
+        
+        if p.is_dir():
+            raise ValueError(
+                f"'{p}' является директорией, а не файлом.\n"
+                f"Укажите конкретный файл, например: {p / 'Счет на оплату № ЦБ-11777 от 15.12.2025.pdf'}"
+            )
+        
+        if not p.is_file():
+            raise ValueError(f"Путь '{p}' не является файлом")
+
+        if p.suffix.lower() == ".pdf":
+            pages = pdf_to_pages(p)
+            docs: List[Dict[str, Any]] = []
+            for idx, (img_bytes, _pil, page_text) in enumerate(pages, 1):
+                doc = self.ai.analyze_document_sync(img_bytes, extra_text=page_text)
+                doc.page_number = idx
+                doc.total_pages_processed = len(pages)
+                doc = self.corrector.correct_document(doc)
+                page_dict = self._postprocess(doc).to_dict()
+                try:
+                    img_barcodes = decode_barcodes_from_pil(_pil)
+                    if img_barcodes:
+                        page_dict['barcodes'] = list(dict.fromkeys((page_dict.get('barcodes') or []) + img_barcodes))
+                except Exception:
+                    pass
+                try:
+                    page_dict = merge_invoice_fields(page_dict, page_text)
+                except Exception:
+                    pass
+                docs.append(page_dict)
+            return {"pages": docs, "total_pages": len(docs)}
+        else:
+            page_text = ""
+            img_bytes = p.read_bytes()
+            doc = self.ai.analyze_document_sync(img_bytes, extra_text=page_text)
+            doc = self.corrector.correct_document(doc)
+            return self._postprocess(doc).to_dict()
+
+    def process_directory(self, dir_path: PathLike) -> Dict[str, Any]:
+        """Обработать все поддерживаемые файлы в директории"""
+        p = Path(dir_path)
+        if not p.is_dir():
+            raise ValueError(f"'{p}' не является директорией")
+        
+        # Поддерживаемые расширения
+        extensions = {'.pdf', '.jpg', '.jpeg', '.png', '.bmp'}
+        files = [f for f in p.iterdir() if f.is_file() and f.suffix.lower() in extensions]
+        
+        if not files:
+            logger.warning(f"В директории '{p}' не найдено поддерживаемых файлов")
+            return {"pages": [], "total_pages": 0}
+        
+        logger.info(f"Найдено {len(files)} файлов в директории '{p}'")
+        
+        all_pages = []
+        for file_path in sorted(files):
+            try:
+                logger.info(f"Обработка: {file_path.name}")
+                result = self.process_file(file_path)
+                
+                # Если результат - словарь с pages, добавляем их
+                if isinstance(result, dict) and "pages" in result:
+                    for page in result["pages"]:
+                        page["source_file"] = file_path.name
+                    all_pages.extend(result["pages"])
+                # Если результат - одна страница (dict без pages)
+                elif isinstance(result, dict):
+                    result["source_file"] = file_path.name
+                    all_pages.append(result)
+            except Exception as e:
+                logger.error(f"Ошибка при обработке {file_path.name}: {e}")
+                all_pages.append({
+                    "source_file": file_path.name,
+                    "error": str(e),
+                    "document_type": "error"
+                })
+        
+        return {"pages": all_pages, "total_pages": len(all_pages)}
+
+    def _postprocess(self, doc: DocumentData) -> DocumentData:
+        # Валидация арифметики
+        items_dicts = [it.to_dict() for it in doc.items]
+        ar = self.validator.validate_arithmetic(items_dicts)
+        if not ar.is_valid:
+            doc.error = (doc.error or "") + ("; " if doc.error else "") + " | ".join(ar.errors)
+
+        # Сопоставление товаров с 1С номенклатурой (если база заполнена)
+        mapped_items: List[DocumentItem] = []
+        for it in doc.items:
+            mapping = self.inv.get_or_suggest_mapping(it.name, it.sku)
+            if mapping:
+                # сохраняем предложенное сопоставление (с низкой уверенностью — можно перезаписать позже)
+                try:
+                    self.db.save_mapping(mapping)
+                except Exception:
+                    pass
+                it.sku = it.sku or mapping.supplier_sku
+            mapped_items.append(it)
+
+        doc.items = mapped_items
+        return doc
+
+    def save_json(self, data: Dict[str, Any], out_path: PathLike) -> Path:
+        out = Path(out_path)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        return out
