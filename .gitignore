@@ -162,6 +162,8 @@ cython_debug/
 invoices/
 out/
 out/cache/
+out/cache_pages/
+out/temp/
 .venv/
 .env
 *.db

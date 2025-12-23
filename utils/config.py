@@ -14,6 +14,8 @@ class Settings:
     openai_model: str = "gpt-4o-mini"
     max_workers: int = 3
     max_openai_concurrency: int = 2
+    price_per_1k_in: float = 0.15  # Цена за 1K входных токенов в USD
+    price_per_1k_out: float = 0.60  # Цена за 1K выходных токенов в USD
 
 def load_settings(env_path: str = ".env") -> Settings:
     """Загрузка настроек из .env и переменных окружения."""
@@ -28,4 +30,6 @@ def load_settings(env_path: str = ".env") -> Settings:
         openai_model=os.getenv("OPENAI_MODEL", "gpt-4o-mini").strip(),
         max_workers=int(os.getenv("MAX_WORKERS", "3")),
         max_openai_concurrency=int(os.getenv("MAX_OPENAI_CONCURRENCY", "2")),
+        price_per_1k_in=float(os.getenv("PRICE_PER_1K_IN", "0.15")),
+        price_per_1k_out=float(os.getenv("PRICE_PER_1K_OUT", "0.60")),
     )

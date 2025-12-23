@@ -2,5 +2,17 @@ services:
   app:
     build: .
     container_name: auto_deep_fixed_app
+    ports:
+      - "8000:8000"
     volumes:
       - .:/app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o-mini}
+      - MAX_WORKERS=${MAX_WORKERS:-3}
+      - MAX_OPENAI_CONCURRENCY=${MAX_OPENAI_CONCURRENCY:-2}
+      - PRICE_PER_1K_IN=${PRICE_PER_1K_IN:-0.15}
+      - PRICE_PER_1K_OUT=${PRICE_PER_1K_OUT:-0.60}
+      - DB_PATH=${DB_PATH:-inventory.db}
+    env_file:
+      - .env

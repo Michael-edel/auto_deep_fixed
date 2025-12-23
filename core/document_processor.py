@@ -33,6 +33,16 @@ class DocumentProcessor:
             cache_dir = Path("out/cache")
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Настройка кэша страниц
+        self.cache_pages_dir = Path("out/cache_pages")
+        self.cache_pages_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Статистика
+        self.stats = {
+            "cache_hit": 0,
+            "cache_miss": 0,
+        }
 
     def _compute_file_hash(self, file_path: Path) -> str:
         """Вычислить SHA256 хеш файла."""
@@ -42,9 +52,17 @@ class DocumentProcessor:
                 sha256.update(chunk)
         return sha256.hexdigest()
 
+    def get_file_hash(self, file_path: PathLike) -> str:
+        """Получить SHA256 хеш файла (публичный метод для дедупликации)."""
+        return self._compute_file_hash(Path(file_path))
+
     def _get_cache_path(self, file_hash: str) -> Path:
         """Получить путь к файлу кэша."""
         return self.cache_dir / f"{file_hash}.json"
+
+    def _get_page_cache_path(self, file_hash: str, page_num: int) -> Path:
+        """Получить путь к файлу кэша страницы."""
+        return self.cache_pages_dir / f"{file_hash}_p{page_num}.json"
 
     def _load_from_cache(self, cache_path: Path) -> Optional[Dict[str, Any]]:
         """Загрузить результат из кэша."""
@@ -63,6 +81,24 @@ class DocumentProcessor:
                 json.dump(result, f, ensure_ascii=False, indent=2)
         except Exception as e:
             logger.warning(f"Ошибка при сохранении кэша {cache_path}: {e}")
+
+    def _load_page_from_cache(self, cache_path: Path) -> Optional[Dict[str, Any]]:
+        """Загрузить страницу из кэша."""
+        try:
+            if cache_path.exists():
+                with cache_path.open("r", encoding="utf-8") as f:
+                    return json.load(f)
+        except Exception as e:
+            logger.warning(f"Ошибка при загрузке кэша страницы {cache_path}: {e}")
+        return None
+
+    def _save_page_to_cache(self, cache_path: Path, page_dict: Dict[str, Any]) -> None:
+        """Сохранить страницу в кэш."""
+        try:
+            with cache_path.open("w", encoding="utf-8") as f:
+                json.dump(page_dict, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            logger.warning(f"Ошибка при сохранении кэша страницы {cache_path}: {e}")
 
     def process_file(self, file_path: PathLike) -> Dict[str, Any]:
         p = Path(file_path)
@@ -86,31 +122,46 @@ class DocumentProcessor:
         cached_result = self._load_from_cache(cache_path)
         if cached_result is not None:
             logger.info(f"Cache hit: {p.name} (hash: {file_hash[:8]}...)")
+            self.stats["cache_hit"] += 1
             return cached_result
 
         logger.info(f"Cache miss: {p.name} (hash: {file_hash[:8]}...)")
+        self.stats["cache_miss"] += 1
 
         # Обрабатываем файл как обычно
         if p.suffix.lower() == ".pdf":
             pages = pdf_to_pages(p)
             docs: List[Dict[str, Any]] = []
             for idx, (img_bytes, _pil, page_text) in enumerate(pages, 1):
-                doc = self.ai.analyze_document_sync(img_bytes, extra_text=page_text)
-                doc.page_number = idx
-                doc.total_pages_processed = len(pages)
-                doc = self.corrector.correct_document(doc)
-                page_dict = self._postprocess(doc).to_dict()
-                try:
-                    img_barcodes = decode_barcodes_from_pil(_pil)
-                    if img_barcodes:
-                        page_dict['barcodes'] = list(dict.fromkeys((page_dict.get('barcodes') or []) + img_barcodes))
-                except Exception:
-                    pass
-                try:
-                    page_dict = merge_invoice_fields(page_dict, page_text)
-                except Exception:
-                    pass
-                docs.append(page_dict)
+                # Проверяем кэш страницы
+                page_cache_path = self._get_page_cache_path(file_hash, idx)
+                cached_page = self._load_page_from_cache(page_cache_path)
+                
+                if cached_page is not None:
+                    # Используем закэшированную страницу
+                    logger.debug(f"Page cache hit: {p.name} page {idx} (hash: {file_hash[:8]}...)")
+                    docs.append(cached_page)
+                else:
+                    # Обрабатываем страницу через OpenAI
+                    logger.debug(f"Page cache miss: {p.name} page {idx} (hash: {file_hash[:8]}...)")
+                    doc = self.ai.analyze_document_sync(img_bytes, extra_text=page_text)
+                    doc.page_number = idx
+                    doc.total_pages_processed = len(pages)
+                    doc = self.corrector.correct_document(doc)
+                    page_dict = self._postprocess(doc).to_dict()
+                    try:
+                        img_barcodes = decode_barcodes_from_pil(_pil)
+                        if img_barcodes:
+                            page_dict['barcodes'] = list(dict.fromkeys((page_dict.get('barcodes') or []) + img_barcodes))
+                    except Exception:
+                        pass
+                    try:
+                        page_dict = merge_invoice_fields(page_dict, page_text)
+                    except Exception:
+                        pass
+                    # Сохраняем страницу в кэш
+                    self._save_page_to_cache(page_cache_path, page_dict)
+                    docs.append(page_dict)
             result = {"pages": docs, "total_pages": len(docs)}
         else:
             page_text = ""
@@ -192,3 +243,11 @@ class DocumentProcessor:
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
         return out
+
+    def get_stats(self) -> Dict[str, int]:
+        """Получить статистику обработки."""
+        return self.stats.copy()
+
+    def reset_stats(self) -> None:
+        """Сбросить статистику."""
+        self.stats = {"cache_hit": 0, "cache_miss": 0}

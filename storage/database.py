@@ -58,6 +58,29 @@ class Database:
         cur.execute("CREATE INDEX IF NOT EXISTS idx_mapping_supplier_name ON product_mappings(supplier_item_name)")
         cur.execute("CREATE INDEX IF NOT EXISTS idx_mapping_supplier_sku ON product_mappings(supplier_sku)")
 
+        # Таблица для статистики обработки документов
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS runs (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                job_id TEXT NOT NULL,
+                client_id TEXT,
+                filename TEXT NOT NULL,
+                hash TEXT NOT NULL,
+                cached INTEGER DEFAULT 0,
+                openai_requests INTEGER DEFAULT 0,
+                tokens_in INTEGER DEFAULT 0,
+                tokens_out INTEGER DEFAULT 0,
+                cost_usd REAL DEFAULT 0.0,
+                elapsed_ms INTEGER DEFAULT 0,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        """)
+
+        cur.execute("CREATE INDEX IF NOT EXISTS idx_runs_job_id ON runs(job_id)")
+        cur.execute("CREATE INDEX IF NOT EXISTS idx_runs_client_id ON runs(client_id)")
+        cur.execute("CREATE INDEX IF NOT EXISTS idx_runs_hash ON runs(hash)")
+        cur.execute("CREATE INDEX IF NOT EXISTS idx_runs_created_at ON runs(created_at)")
+
         conn.commit()
         conn.close()
         logger.info("База инициализирована: %s", self.db_path)
@@ -200,3 +223,88 @@ class Database:
         """, (datetime.now().isoformat(), supplier_name, supplier_sku, supplier_sku, my_item_id_1c))
         conn.commit()
         conn.close()
+
+    # ---- runs (статистика обработки) ----
+    def save_run(self, job_id: str, client_id: Optional[str], filename: str, file_hash: str,
+                 cached: bool, openai_requests: int, tokens_in: int, tokens_out: int,
+                 cost_usd: float, elapsed_ms: int) -> None:
+        """Сохранить статистику обработки документа."""
+        conn = self._get_connection()
+        cur = conn.cursor()
+        cur.execute("""
+            INSERT INTO runs (job_id, client_id, filename, hash, cached, openai_requests,
+                           tokens_in, tokens_out, cost_usd, elapsed_ms, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (
+            job_id,
+            client_id,
+            filename,
+            file_hash,
+            1 if cached else 0,
+            openai_requests,
+            tokens_in,
+            tokens_out,
+            cost_usd,
+            elapsed_ms,
+            datetime.now().isoformat(),
+        ))
+        conn.commit()
+        conn.close()
+
+    def get_runs_stats(self, client_id: Optional[str] = None) -> Dict:
+        """Получить агрегированную статистику по обработке."""
+        conn = self._get_connection()
+        cur = conn.cursor()
+        
+        if client_id:
+            cur.execute("""
+                SELECT 
+                    COUNT(*) as total_runs,
+                    SUM(CASE WHEN cached = 1 THEN 1 ELSE 0 END) as cached_runs,
+                    SUM(openai_requests) as total_openai_requests,
+                    SUM(tokens_in) as total_tokens_in,
+                    SUM(tokens_out) as total_tokens_out,
+                    SUM(cost_usd) as total_cost_usd,
+                    SUM(elapsed_ms) as total_elapsed_ms
+                FROM runs
+                WHERE client_id = ?
+            """, (client_id,))
+        else:
+            cur.execute("""
+                SELECT 
+                    COUNT(*) as total_runs,
+                    SUM(CASE WHEN cached = 1 THEN 1 ELSE 0 END) as cached_runs,
+                    SUM(openai_requests) as total_openai_requests,
+                    SUM(tokens_in) as total_tokens_in,
+                    SUM(tokens_out) as total_tokens_out,
+                    SUM(cost_usd) as total_cost_usd,
+                    SUM(elapsed_ms) as total_elapsed_ms
+                FROM runs
+            """)
+        
+        row = cur.fetchone()
+        conn.close()
+        
+        if not row or row["total_runs"] is None:
+            return {
+                "total_runs": 0,
+                "cached_runs": 0,
+                "total_openai_requests": 0,
+                "total_tokens_in": 0,
+                "total_tokens_out": 0,
+                "total_cost_usd": 0.0,
+                "total_elapsed_ms": 0,
+                "avg_elapsed_ms": 0,
+            }
+        
+        total_runs = row["total_runs"] or 0
+        return {
+            "total_runs": total_runs,
+            "cached_runs": row["cached_runs"] or 0,
+            "total_openai_requests": row["total_openai_requests"] or 0,
+            "total_tokens_in": row["total_tokens_in"] or 0,
+            "total_tokens_out": row["total_tokens_out"] or 0,
+            "total_cost_usd": float(row["total_cost_usd"] or 0.0),
+            "total_elapsed_ms": row["total_elapsed_ms"] or 0,
+            "avg_elapsed_ms": (row["total_elapsed_ms"] or 0) // total_runs if total_runs > 0 else 0,
+        }

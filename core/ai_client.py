@@ -26,6 +26,13 @@ class AIClient:
         self.async_client = AsyncOpenAI(api_key=api_key)
         # Semaphore для ограничения одновременных запросов к OpenAI
         self._semaphore = threading.Semaphore(max_concurrency)
+        # Счетчик запросов для статистики
+        self._request_count = 0
+        self._request_count_lock = threading.Lock()
+        # Счетчики токенов
+        self._tokens_in = 0
+        self._tokens_out = 0
+        self._tokens_lock = threading.Lock()
 
         logger.info("AIClient инициализирован (model=%s, key=%s..., max_concurrency=%d)", 
                    model, api_key[:10], max_concurrency)
@@ -142,12 +149,41 @@ class AIClient:
                     ],
                     response_format={"type": "json_object"},
                 )
+                # Увеличиваем счетчик запросов и токенов
+                with self._request_count_lock:
+                    self._request_count += 1
+                
+                # Собираем статистику по токенам
+                usage = response.usage
+                if usage:
+                    with self._tokens_lock:
+                        self._tokens_in += (usage.prompt_tokens or 0)
+                        self._tokens_out += (usage.completion_tokens or 0)
+                
                 result_json = response.choices[0].message.content
                 result_dict = json.loads(result_json)
                 return DocumentData.from_dict(result_dict)
             except Exception as e:
                 logger.error("Ошибка при синхронном анализе документа: %s", e, exc_info=True)
                 return DocumentData(document_type="unknown", error=self._format_error_message(e))
+
+    def get_request_count(self) -> int:
+        """Получить количество выполненных запросов к OpenAI."""
+        with self._request_count_lock:
+            return self._request_count
+
+    def get_tokens(self) -> tuple[int, int]:
+        """Получить количество использованных токенов (in, out)."""
+        with self._tokens_lock:
+            return (self._tokens_in, self._tokens_out)
+
+    def reset_counters(self) -> None:
+        """Сбросить счетчики запросов и токенов."""
+        with self._request_count_lock:
+            self._request_count = 0
+        with self._tokens_lock:
+            self._tokens_in = 0
+            self._tokens_out = 0
 
     @staticmethod
     def _format_error_message(error: Exception) -> str:
