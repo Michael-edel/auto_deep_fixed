@@ -1,0 +1,45 @@
+{
+  "document_type": "счет на оплату",
+  "iin_bin": null,
+  "company_name": "РекламаИнвестГрупп",
+  "document_number": "unknown",
+  "document_date": null,
+  "subtotal": "96 650,00",
+  "vat": "10 355,34",
+  "total": "96 650,00",
+  "items": [
+    {
+      "name": "Очиститель универсальный RECTOR (средство для обработки внешних поверхностей) в аэрозольной упаковке 400мл",
+      "sku": "PRECTOR400ml",
+      "quantity": "1",
+      "unit": "шт",
+      "price": "800,00",
+      "total": "800.00"
+    },
+    {
+      "name": "RECTOR Средство для обработки внутренних поверхностей Литиевая смазка в аэрозольной упаковке 150мл",
+      "sku": "RECTORLS150",
+      "quantity": "1",
+      "unit": "шт",
+      "price": "700,00",
+      "total": "700.00"
+    },
+    {
+      "name": "Заглушка пластиковая HC-011",
+      "sku": "ZGP-HC-011",
+      "quantity": "20",
+      "unit": "шт",
+      "price": "31,00",
+      "total": "620.00"
+    }
+  ],
+  "error": null,
+  "page_number": 2,
+  "total_pages_processed": 2,
+  "supplier": {
+    "name": "РекламаИнвестГрупп"
+  },
+  "buyer": {},
+  "payment": {},
+  "barcodes": []
+}

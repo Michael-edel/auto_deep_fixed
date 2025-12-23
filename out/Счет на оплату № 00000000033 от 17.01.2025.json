@@ -1,0 +1,55 @@
+{
+  "source_file": "invoices/Счет на оплату № 00000000033 от 17.01.2025.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "240940026351",
+        "company_name": "Объединение индивидуальных предпринимателей и юридических лиц « Казахстанская ассоциация информационных технологий и инноваций»",
+        "document_number": "Счет на оплату № 33",
+        "document_date": "17 января 2025 г.",
+        "subtotal": "80000,00",
+        "vat": "",
+        "total": "80000,00",
+        "items": [
+          {
+            "name": "Ежегодный членский взнос",
+            "sku": "00000000009",
+            "quantity": "1,000",
+            "unit": "шт",
+            "price": "80000,00",
+            "total": "80000.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "Объединение индивидуальных предпринимателей и юридических лиц « Казахстанская ассоциация информационных технологий и инноваций»",
+          "bin_iin": "240940026351",
+          "address": "",
+          "phone": ""
+        },
+        "buyer": {
+          "name": "ТОО «PSGroup»",
+          "bin_iin": "131240010230",
+          "address": "г. Экибастуз, ул. Бауржан Момышулы 49А, оф.15",
+          "phone": "77077036206"
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"Народный Банк Казахстана\"",
+          "beneficiary_bank_bik": "HSBKKZKX",
+          "beneficiary_account_iban": "KZ20601A871035545141",
+          "beneficiary_bin_iin": "240940026351",
+          "kbe": "18",
+          "knp": "120",
+          "payment_code": "",
+          "payment_purpose": ""
+        },
+        "barcodes": []
+      }
+    ],
+    "total_pages": 1
+  }
+}

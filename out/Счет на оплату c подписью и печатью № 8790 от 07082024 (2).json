@@ -1,0 +1,125 @@
+{
+  "source_file": "invoices/Счет на оплату c подписью и печатью № 8790 от 07082024 (2).pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "7720478065",
+        "company_name": "ООО \"ФЕДАСТ ИМПОРТ\"",
+        "document_number": "8790",
+        "document_date": "7 августа 2024 г.",
+        "subtotal": "64 946,40",
+        "vat": "10 824,40",
+        "total": "64 946,40",
+        "items": [
+          {
+            "name": "Газовый монтажный пистолет HYBEST GSR40A арт. HBGSR40A2022 (новая версия)",
+            "sku": "HBGSR40A",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "21 267,20",
+            "total": "21267.20"
+          },
+          {
+            "name": "Гвозди 3.0*22 мм для монтажного пистолета с кованым наконечником Bullet point (1000 шт/уп) FEDAST",
+            "sku": "fd3022mgbp",
+            "quantity": "5",
+            "unit": "уп",
+            "price": "893,60",
+            "total": "4468.00"
+          },
+          {
+            "name": "Монтажная лента текстильная 50 м цвет: красный FEDAST",
+            "sku": "mtl-201050kr",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "600,00",
+            "total": "3000.00"
+          },
+          {
+            "name": "Монтажная лента текстильная 50 м цвет: синий FEDAST",
+            "sku": "mtl-201050si",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "600,00",
+            "total": "3000.00"
+          },
+          {
+            "name": "Монтажная лента текстильная 50 м цвет: черный FEDAST",
+            "sku": "mtl-201050",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "600,00",
+            "total": "3000.00"
+          },
+          {
+            "name": "Перфолента оцинкованная монтажная волна 12*0,55 мм (25 м) FEDAST",
+            "sku": "mpl-120525",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "247,20",
+            "total": "1236.00"
+          },
+          {
+            "name": "Перфорированная тарная лента 20x0.5 (25 м) FEDAST",
+            "sku": "ptl-200525",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "380,00",
+            "total": "1900.00"
+          },
+          {
+            "name": "Набор для монтажа утеплителя для GSR40A",
+            "sku": "GSR40A100I",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "3 333,60",
+            "total": "6667.20"
+          },
+          {
+            "name": "Гвозди 3.0*16 мм для монтажного пистолета с кованым наконечником Bullet point (1000 шт/уп + газовый баллон) FEDAST",
+            "sku": "fd3016mgbpf",
+            "quantity": "10",
+            "unit": "шт",
+            "price": "1 042,40",
+            "total": "10424.00"
+          },
+          {
+            "name": "Гвозди 2.7*19 мм кованые с ребрами жесткости Bullet Point (1000 шт/уп + газовый баллон) FEDAST",
+            "sku": "FD2719RBPF",
+            "quantity": "10",
+            "unit": "уп",
+            "price": "998,40",
+            "total": "9984.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "ООО \"ФЕДАСТ ИМПОРТ\"",
+          "bin_iin": "7720478065",
+          "address": "109382, Г.Москва, вн.тер. г. Муниципальный Округ Люблино, проезд Егорьевский, дом 3Ж, строение 6, помещение XV, этаж 5 ком. 14",
+          "phone": "+7 499 283-60-33"
+        },
+        "buyer": {
+          "name": "Товарищество с ограниченной ответственностью «Michael»",
+          "address": "141200, Республика Казахстан, Павлодарская обл., г.Экибастуз, ул.Абая 60/, здание офис 113",
+          "phone": "777775550016"
+        },
+        "payment": {
+          "beneficiary_bank_name": "Joint stock company Asian - Pacific Bank",
+          "beneficiary_bank_bik": "ASANRU8XXXX",
+          "beneficiary_account_iban": "40702810100570000674",
+          "beneficiary_bin_iin": "407028210100500674",
+          "payment_purpose": "Оплата по заказу клиента №8790",
+          "kbe": null,
+          "payment_code": null
+        },
+        "barcodes": []
+      }
+    ],
+    "total_pages": 1
+  }
+}

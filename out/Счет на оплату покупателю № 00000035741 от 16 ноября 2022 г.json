@@ -1,0 +1,117 @@
+{
+  "source_file": "invoices/Счет на оплату покупателю № 00000035741 от 16 ноября 2022 г.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "110140018870",
+        "company_name": "Товарищество с ограниченной ответственностью \"РекламИнвестГрупп\"",
+        "document_number": "00000035741",
+        "document_date": "16 ноября 2022 г.",
+        "subtotal": "94 800,00",
+        "vat": "10 157,12",
+        "total": "94 800,00",
+        "items": [
+          {
+            "name": "Светодиоды LED вмонтированные в гибкую панель R060GW08A-2835 (10000-12000К) белый",
+            "sku": "L60W",
+            "quantity": "50",
+            "unit": "м",
+            "price": "450,00",
+            "total": "22500.00"
+          },
+          {
+            "name": "LED Выпрямитель JLV-12100PA",
+            "sku": "JLV-12100PA",
+            "quantity": "4",
+            "unit": "шт",
+            "price": "5 100,00",
+            "total": "20400.00"
+          },
+          {
+            "name": "LED Выпрямитель  JLV-400N-12",
+            "sku": "JLV-400N-12",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "5 500,00",
+            "total": "11000.00"
+          },
+          {
+            "name": "LED Выпрямитель  JLV-12024PA-W",
+            "sku": "JLV-12024PA-W",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "1 950,00",
+            "total": "9750.00"
+          },
+          {
+            "name": "Выпрямитель LED JLV-12080 KA-W",
+            "sku": "C80W",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "4 100,00",
+            "total": "8200.00"
+          },
+          {
+            "name": "LED Выпрямитель JLV-12015K",
+            "sku": "O15W",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "1 600,00",
+            "total": "8000.00"
+          },
+          {
+            "name": "Клей 2-х компонентный MITRE APEL 200мл",
+            "sku": "GL200",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "1 150,00",
+            "total": "5750.00"
+          },
+          {
+            "name": "LED Выпрямитель JLV-12100KA-L",
+            "sku": "JLV-12100KA-L",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "5 200,00",
+            "total": "5200.00"
+          },
+          {
+            "name": "Клей 2-х компонентный MITRE APEL 100мл",
+            "sku": "GL100",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "800,00",
+            "total": "4000.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "Товарищество с ограниченной ответственностью \"РекламИнвестГрупп\"",
+          "bin_iin": "110140018870",
+          "address": "050046, Республика Казахстан, г.Алматы, Сатпаева, дом № 90/34"
+        },
+        "buyer": {
+          "name": "ТОО Michael",
+          "address": "",
+          "phone": "+7 (777) 555-00-16"
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"Народный Банк Казахстана\"",
+          "beneficiary_bank_bik": "HSBKKZKX",
+          "beneficiary_account_iban": "KZ436017131000028892",
+          "beneficiary_bin_iin": "110140018870",
+          "kbe": "17",
+          "knp": "710",
+          "payment_purpose": "Договор web-сайт KZT",
+          "payment_code": null
+        },
+        "barcodes": []
+      }
+    ],
+    "total_pages": 1
+  }
+}

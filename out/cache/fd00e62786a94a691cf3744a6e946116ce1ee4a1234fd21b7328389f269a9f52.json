@@ -1,0 +1,119 @@
+{
+  "pages": [
+    {
+      "document_type": "счет на оплату",
+      "iin_bin": "081140001682",
+      "company_name": "ТОО VENDER",
+      "document_number": "584166",
+      "document_date": "25 августа 2023",
+      "subtotal": "345 068",
+      "vat": "36 972",
+      "total": "345 068",
+      "items": [
+        {
+          "name": "Картридж, Europrint, EPC-725, Для принтеров Canon i-SENSYS LBP-6000/6000B/6020/6030, MF3010, 1600 страниц.",
+          "sku": "5575",
+          "quantity": "2",
+          "unit": "шт",
+          "price": "2 690",
+          "total": "5380.00"
+        },
+        {
+          "name": "Монитор, X-game, OFLED27, 27\", IPS-матрица, VGA, HDMI, Аудиовход, LED, 250кд/м2, 1000:1, 5 мс, угол обзора(гор/верт)178/178, 1920*1080, 75 Гц, HDMI кабель в комплекте, Чёрный",
+          "sku": "47808",
+          "quantity": "1",
+          "unit": "шт",
+          "price": "44 931",
+          "total": "44931.00"
+        },
+        {
+          "name": "Процессор, Intel, Pentium G4400 LGA1151, оем, 3M, 3.3 GHz, 2/2 Core Skylake, 54 Вт, HD510",
+          "sku": "38085",
+          "quantity": "1",
+          "unit": "шт",
+          "price": "30 933",
+          "total": "30933.00"
+        },
+        {
+          "name": "Твердотельный накопитель SSD, ADATA, Ultimate SU650 ASU650NS38-256GT-C, 256GB, M.2 SATA, 520/450 Мб/с",
+          "sku": "51874",
+          "quantity": "1",
+          "unit": "шт",
+          "price": "6 744",
+          "total": "6744.00"
+        },
+        {
+          "name": "Контактор, ANDELI, CJX2-D40 AC 220V, 1HO 1H3",
+          "sku": "14578",
+          "quantity": "10",
+          "unit": "шт",
+          "price": "4 885",
+          "total": "48850.00"
+        },
+        {
+          "name": "Автоматический выключатель, CHINT, NXB-63S, 1P 63A C 4,5kA 296716",
+          "sku": "54428",
+          "quantity": "110",
+          "unit": "шт",
+          "price": "564",
+          "total": "62040.00"
+        },
+        {
+          "name": "Автоматический выключатель, CHINT, NXB-63S, 1P 16A C 4,5kA 296710",
+          "sku": "54422",
+          "quantity": "110",
+          "unit": "шт",
+          "price": "419",
+          "total": "46090.00"
+        },
+        {
+          "name": "Автоматический выключатель, CHINT, NXB-63S, 1P 25A C 4,5kA 296712",
+          "sku": "54424",
+          "quantity": "110",
+          "unit": "шт",
+          "price": "431",
+          "total": "47410.00"
+        },
+        {
+          "name": "Автоматический выключатель, CHINT, NXB-63S, 1P 40A C 4,5kA 296714",
+          "sku": "54426",
+          "quantity": "110",
+          "unit": "шт",
+          "price": "479",
+          "total": "52690.00"
+        }
+      ],
+      "error": null,
+      "page_number": 1,
+      "total_pages_processed": 1,
+      "supplier": {
+        "name": "ТОО VENDER",
+        "bin_iin": "081140001682",
+        "address": "Алматы, Нурсултана Назарбаева 19",
+        "phone": "+7 727 300 0 300"
+      },
+      "buyer": {
+        "name": "ТОО Michael",
+        "bin_iin": "170940023817",
+        "address": "",
+        "phone": ""
+      },
+      "payment": {
+        "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+        "beneficiary_bank_bik": "KCJBKZKX",
+        "beneficiary_account_iban": "KZ568562203117839999",
+        "kbe": "17",
+        "knp": "710",
+        "payment_purpose": "",
+        "beneficiary_bin_iin": "081140001682",
+        "payment_code": null
+      },
+      "barcodes": [
+        "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000584166%22%2C%22date%22%3A%2225%2E08%2E2023%22%2C%22sum%22%3A345068%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22feca4e8c%2D42f8%2D11ee%2Dbc8d%2D00505693d21a%22%7d",
+        "https://r.alstyle.kz/book",
+        "https://clc.to/alstyle_banner5"
+      ]
+    }
+  ],
+  "total_pages": 1
+}

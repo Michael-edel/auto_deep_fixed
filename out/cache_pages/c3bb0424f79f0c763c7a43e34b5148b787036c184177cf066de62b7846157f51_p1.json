@@ -1,0 +1,98 @@
+{
+  "document_type": "счет на оплату",
+  "iin_bin": "081140001682",
+  "company_name": "ТОО VENDER",
+  "document_number": "Счет № 575371",
+  "document_date": "10 августа 2023",
+  "subtotal": "74 555",
+  "vat": "7 988",
+  "total": "82 543",
+  "items": [
+    {
+      "name": "Аккумулятор, CAMELION, NH-9V250BP1, Rechargeable, Lockbox Rechargeable, 6F22(крона), 9V, 250 mAh, 1 шт., Блистер",
+      "sku": "8627",
+      "quantity": "2",
+      "unit": "шт",
+      "price": "1 990",
+      "total": "3980.00"
+    },
+    {
+      "name": "Узел крепления (малый), А-Оптик, АО-УК-02, предназначен для поддерживающего крепления оптического кабеля на промежуточных опорах ВЛ",
+      "sku": "26262",
+      "quantity": "30",
+      "unit": "шт",
+      "price": "250",
+      "total": "7500.00"
+    },
+    {
+      "name": "Контактор, ANDELI, CJX2-D25 AC 220V, 1HO",
+      "sku": "14576",
+      "quantity": "10",
+      "unit": "шт",
+      "price": "2 091",
+      "total": "20910.00"
+    },
+    {
+      "name": "Контактор, ANDELI, CJX2-D32 AC 220V, 1HO",
+      "sku": "14577",
+      "quantity": "10",
+      "unit": "шт",
+      "price": "2 194",
+      "total": "21940.00"
+    },
+    {
+      "name": "Контактор, ANDELI, CJX2-D09 AC 220V, 1HO",
+      "sku": "14573",
+      "quantity": "5",
+      "unit": "шт",
+      "price": "1 291",
+      "total": "6455.00"
+    },
+    {
+      "name": "Контактор, ANDELI, CJX2-D12 AC 220V, 1HO",
+      "sku": "14574",
+      "quantity": "5",
+      "unit": "шт",
+      "price": "1 291",
+      "total": "6455.00"
+    },
+    {
+      "name": "Контактор, ANDELI, CJX2-D18 AC 220V, 1HO",
+      "sku": "14575",
+      "quantity": "5",
+      "unit": "шт",
+      "price": "1 463",
+      "total": "7315.00"
+    }
+  ],
+  "error": null,
+  "page_number": 1,
+  "total_pages_processed": 1,
+  "supplier": {
+    "name": "ТОО VENDER",
+    "bin_iin": "081140001682",
+    "address": "Алматы, Нурсултана Назарбаева 19",
+    "phone": "+7 727 300 0 300"
+  },
+  "buyer": {
+    "name": "ТОО Michael",
+    "bin_iin": "170940023817",
+    "address": "",
+    "phone": ""
+  },
+  "payment": {
+    "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+    "beneficiary_bank_bik": "KCJBKZKX",
+    "beneficiary_account_iban": "KZ568562203117839999",
+    "kbe": "17",
+    "knp": "710",
+    "beneficiary_bin_iin": "081140001682",
+    "payment_code": null,
+    "payment_purpose": null
+  },
+  "barcodes": [
+    "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000575371%22%2C%22date%22%3A%2210%2E08%2E2023%22%2C%22sum%22%3A74555%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%224a220c23%2D3772%2D11ee%2D9ec3%2D002590a8d62b%22%7d",
+    "https://r.alstyle.kz/book",
+    "https://r.alstyle.kz/banner3"
+  ]
+}

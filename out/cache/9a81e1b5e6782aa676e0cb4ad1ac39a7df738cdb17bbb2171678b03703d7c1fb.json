@@ -1,0 +1,209 @@
+{
+  "pages": [
+    {
+      "document_type": "счет на оплату",
+      "iin_bin": "081140001682",
+      "company_name": "ТОО VENDER",
+      "document_number": "539132",
+      "document_date": "7 июня 2023",
+      "subtotal": "272540",
+      "vat": "32545",
+      "total": "305 245",
+      "items": [
+        {
+          "name": "Клемма проходная, ANDELI, JXB 2.5/35, 2,5 мм2, серая",
+          "sku": "43256",
+          "quantity": "100",
+          "unit": "шт",
+          "price": "48",
+          "total": "4800.00"
+        },
+        {
+          "name": "Батарейка, VARTA, LR20 Longlife, D, 1.5 V, 2 шт., в блистере",
+          "sku": "24902",
+          "quantity": "2",
+          "unit": "шт",
+          "price": "2 358",
+          "total": "4716.00"
+        },
+        {
+          "name": "Патч Корд, SHIP, S4025BL0500-P, Cat.5e, FTP, LSZH, RJ-45, 5 м, Синий, Экранированный, Пол. пакет",
+          "sku": "4299",
+          "quantity": "18",
+          "unit": "шт",
+          "price": "1 758",
+          "total": "31644.00"
+        },
+        {
+          "name": "Контактор, ANDELI, CJX2-D95 AC 220V, 1HO 1H3",
+          "sku": "14582",
+          "quantity": "5",
+          "unit": "шт",
+          "price": "6 403",
+          "total": "32015.00"
+        },
+        {
+          "name": "Контактор, ANDELI, CJX2-D80 AC 220V, 1HO 1H3",
+          "sku": "14581",
+          "quantity": "5",
+          "unit": "шт",
+          "price": "6 407",
+          "total": "32035.00"
+        },
+        {
+          "name": "Контактор, ANDELI, CJX2-D18 AC 220V, 1HO",
+          "sku": "14575",
+          "quantity": "10",
+          "unit": "шт",
+          "price": "1 448",
+          "total": "14480.00"
+        },
+        {
+          "name": "Контактор, ANDELI, CJX2-D12 AC 220V, 1HO",
+          "sku": "14574",
+          "quantity": "5",
+          "unit": "шт",
+          "price": "1 278",
+          "total": "6390.00"
+        },
+        {
+          "name": "Контактор, ANDELI, CJX2-D32 AC 220V, 1HO",
+          "sku": "14577",
+          "quantity": "5",
+          "unit": "шт",
+          "price": "2 172",
+          "total": "10860.00"
+        },
+        {
+          "name": "Контактор, ANDELI, CJX2-D40 AC 220V, 1HO 1H3",
+          "sku": "14578",
+          "quantity": "5",
+          "unit": "шт",
+          "price": "4 834",
+          "total": "24170.00"
+        },
+        {
+          "name": "Контактор, ANDELI, CJX2-D50 AC 220V, 1HO 1H3",
+          "sku": "14579",
+          "quantity": "5",
+          "unit": "шт",
+          "price": "4 841",
+          "total": "24205.00"
+        },
+        {
+          "name": "Контактор, ANDELI, CJX2-D65 AC 220V, 1HO 1H3",
+          "sku": "14580",
+          "quantity": "5",
+          "unit": "шт",
+          "price": "5 194",
+          "total": "25970.00"
+        },
+        {
+          "name": "Реле тепловое, ANDELI, JR28-25 D1322 (17-25А)",
+          "sku": "14701",
+          "quantity": "10",
+          "unit": "шт",
+          "price": "1 127",
+          "total": "11270.00"
+        },
+        {
+          "name": "Реле тепловое, ANDELI, JR28-25 D1321 (12-18А)",
+          "sku": "14700",
+          "quantity": "5",
+          "unit": "шт",
+          "price": "1 128",
+          "total": "5640.00"
+        },
+        {
+          "name": "Реле тепловое, ANDELI, JR28-25 D1316 (9-13А)",
+          "sku": "14699",
+          "quantity": "5",
+          "unit": "шт",
+          "price": "1 126",
+          "total": "5630.00"
+        },
+        {
+          "name": "Реле тепловое, ANDELI, JR28-25 D1314 (7-10А)",
+          "sku": "14698",
+          "quantity": "5",
+          "unit": "шт",
+          "price": "1 128",
+          "total": "5640.00"
+        },
+        {
+          "name": "Вентилятор, SVC, AFD-925, Настольный, Площадь обдува: 15м2, Мощность: 25Вт, Диаметр: 9\", Количество скоростей: 2, Автоповорот, Регулировка наклона, Белый",
+          "sku": "36215",
+          "quantity": "6",
+          "unit": "шт",
+          "price": "4 990",
+          "total": "29940.00"
+        },
+        {
+          "name": "Вентилятор, SVC, AFN-1640, Напольный, Площадь обдува: 20м2, Мощность: 40Вт, Диаметр: 16\", Количество скоростей: 3, Автоповорот, Регулировка наклона и высоты, Круглое основание, Количество лопастей: 5, Белый",
+          "sku": "40264",
+          "quantity": "4",
+          "unit": "шт",
+          "price": "8 960",
+          "total": "35840.00"
+        }
+      ],
+      "error": null,
+      "page_number": 1,
+      "total_pages_processed": 2,
+      "supplier": {
+        "name": "ТОО VENDER",
+        "bin_iin": "081140001682",
+        "address": "Алматы, Нурсултана Назарбаева 19",
+        "phone": "+7 727 300 0 300"
+      },
+      "buyer": {
+        "name": "ТОО Michael",
+        "bin_iin": "170940023817",
+        "address": "",
+        "phone": ""
+      },
+      "payment": {
+        "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+        "beneficiary_bank_bik": "KCJBKZKX",
+        "beneficiary_account_iban": "KZ568562203117839999",
+        "kbe": "17",
+        "knp": "710",
+        "beneficiary_bin_iin": "081140001682",
+        "payment_code": null,
+        "payment_purpose": null
+      },
+      "barcodes": [
+        "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000539132%22%2C%22date%22%3A%2207%2E06%2E2023%22%2C%22sum%22%3A305245%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%2256fbf29a%2D0522%2D11ee%2Da822%2D002590a8d631%22%7d",
+        "https://r.alstyle.kz/book",
+        "https://clc.to/alstyle_banner5"
+      ]
+    },
+    {
+      "document_type": "unknown",
+      "iin_bin": null,
+      "company_name": "ВЕНДЕР",
+      "document_number": "",
+      "document_date": "",
+      "subtotal": "",
+      "vat": "",
+      "total": "",
+      "items": [],
+      "error": null,
+      "page_number": 2,
+      "total_pages_processed": 2,
+      "supplier": {
+        "name": "",
+        "address": "",
+        "phone": ""
+      },
+      "buyer": {
+        "name": "",
+        "address": "",
+        "phone": ""
+      },
+      "payment": {},
+      "barcodes": []
+    }
+  ],
+  "total_pages": 2
+}

@@ -1,0 +1,107 @@
+{
+  "document_type": "счет на оплату",
+  "iin_bin": "081140001682",
+  "company_name": "ТОО VENDER",
+  "document_number": "609755",
+  "document_date": "5 октября 2023",
+  "subtotal": "288 126",
+  "vat": "30 871",
+  "total": "288 126",
+  "items": [
+    {
+      "name": "Кулер для процессора Intel, Deepcool, THETA 15 PWM DP-ICAS-T15P, Intel 1200/115х, 95W, 100мм, 800- 2800±10% об/м, 50.25CFM, 17.8~36.0dB(A), 4pin, 97,5х97,5х46мм, Чёрный",
+      "sku": "16105",
+      "quantity": "2",
+      "unit": "шт",
+      "price": "2965",
+      "total": "5930.00"
+    },
+    {
+      "name": "Процессор, Intel, i3-13100 LGA1700, оем, 12M, 3.40 GHz, 4/8 Core Raptor Lake, 60 (89) Вт, UHD730",
+      "sku": "52257",
+      "quantity": "2",
+      "unit": "шт",
+      "price": "67335",
+      "total": "134670.00"
+    },
+    {
+      "name": "Материнская плата, Gigabyte, H610M H V2 DDR4 (4719331851743), LGA1700, iH610, 2xDDR4 3200/3000/2933/2667/2400 MHz, 4xSATA3, 1xM.2 (PCI-E 3.0x4/x2), 1xD-Sub, 1xHDMI, 1xPCI-Ex16, 1xPCI-Ex1, mATX",
+      "sku": "50832",
+      "quantity": "2",
+      "unit": "шт",
+      "price": "36186",
+      "total": "72372.00"
+    },
+    {
+      "name": "Твердотельный накопитель SSD, Apacer, AS2280P4 AP512GAS2280P4-1, 512 GB, M.2 NVMe PCIe 3.0x4, 3000/2000 Мб/с",
+      "sku": "38143",
+      "quantity": "2",
+      "unit": "шт",
+      "price": "11559",
+      "total": "23118.00"
+    },
+    {
+      "name": "Компьютерный корпус, XG, XC-370PS-2, ATX/Micro ATX, USB 3.0x2, USB 2.0x1,HD-Audio+Mic, Высота процессорного кулера 145мм, Длина VGA до 290мм, 1*5.25\"/2*3.5\"/2*2.5\", Толщина 0.4мм, 400x190x370мм, Б/П, 400W, Черный",
+      "sku": "27791",
+      "quantity": "2",
+      "unit": "шт",
+      "price": "11700",
+      "total": "23400.00"
+    },
+    {
+      "name": "Комплект Клавиатура + Мышь, Delux, DLD-6220OUB, Оптическая Мышь, USB, 1000-3200DPI, Длина кабеля 1,6 метра, Кол-во стандартных клавиш 104, Анг/Рус/Каз, Чёрный",
+      "sku": "50098",
+      "quantity": "2",
+      "unit": "шт",
+      "price": "5550",
+      "total": "11100.00"
+    },
+    {
+      "name": "Сетевой фильтр, SVC, ZP4S-30M, 4 розетки, 3 метра, 220-250В, 10A, полиэтиленовая упаковка, белый",
+      "sku": "35887",
+      "quantity": "2",
+      "unit": "шт",
+      "price": "1593",
+      "total": "3186.00"
+    },
+    {
+      "name": "Модуль памяти, Apacer, EL.08G2V.GNH, DDR4, 8GB, DIMM <PC4-21300/2666MHz>",
+      "sku": "34142",
+      "quantity": "2",
+      "unit": "шт",
+      "price": "7175",
+      "total": "14350.00"
+    }
+  ],
+  "error": null,
+  "page_number": 1,
+  "total_pages_processed": 1,
+  "supplier": {
+    "name": "ТОО VENDER",
+    "bin_iin": "081140001682",
+    "address": "Алматы, Нурсултана Назарбаева 19",
+    "phone": "+7 727 300 0 300"
+  },
+  "buyer": {
+    "name": "ТОО Michael",
+    "bin_iin": "170940023817",
+    "address": "",
+    "phone": ""
+  },
+  "payment": {
+    "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+    "beneficiary_bank_bik": "KCJBKZKX",
+    "beneficiary_account_iban": "KZ568562203117839999",
+    "beneficiary_bin_iin": "null",
+    "kbe": "17",
+    "knp": "710",
+    "payment_code": "null",
+    "payment_purpose": "null"
+  },
+  "barcodes": [
+    "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000609755%22%2C%22date%22%3A%2205%2E10%2E2023%22%2C%22sum%22%3A288126%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22d1ace8be%2D6373%2D11ee%2Da834%2D002590a8d631%22%7d",
+    "https://r.alstyle.kz/book",
+    "https://clc.to/alstyle_banner2",
+    "4719331851743"
+  ]
+}

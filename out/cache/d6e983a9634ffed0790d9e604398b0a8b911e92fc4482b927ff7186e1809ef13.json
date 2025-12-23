@@ -1,0 +1,35 @@
+{
+  "pages": [
+    {
+      "document_type": "unknown",
+      "iin_bin": null,
+      "company_name": null,
+      "document_number": null,
+      "document_date": null,
+      "subtotal": null,
+      "vat": null,
+      "total": null,
+      "items": [],
+      "error": "Ошибка при анализе документа: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-mini in organization org-OJmttXjY0iLrFvOLZR0HQWHf on tokens per min (TPM): Limit 200000, Used 200000, Requested 1931. Please try again in 579ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}",
+      "page_number": 1,
+      "total_pages_processed": 1,
+      "supplier": null,
+      "buyer": null,
+      "payment": {
+        "beneficiary_bank_name": "Банк",
+        "beneficiary_bank_bik": "HSBKKZKX",
+        "beneficiary_account_iban": "KZ986017131000008308",
+        "beneficiary_bin_iin": "081140001682",
+        "kbe": "17",
+        "payment_code": null,
+        "payment_purpose": null
+      },
+      "barcodes": [
+        "https://order.al-style.kz/assembly?data=%7b%22id%22:%2230000037792%22,%22date%22:%2228.06.2022%22,%22sum%22:1884355,%22company_id%22:%22170940023817%22,%22GUID%22:%223cff9590-f6d0-11ec-a801-002590a8d631%22%7d",
+        "https://r.alstyle.kz/book",
+        "https://r.alstyle.kz/banner4"
+      ]
+    }
+  ],
+  "total_pages": 1
+}

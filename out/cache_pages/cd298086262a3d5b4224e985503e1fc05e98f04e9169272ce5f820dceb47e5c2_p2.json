@@ -1,0 +1,35 @@
+{
+  "document_type": "unknown",
+  "iin_bin": null,
+  "company_name": "",
+  "document_number": "",
+  "document_date": "",
+  "subtotal": "",
+  "vat": "",
+  "total": "",
+  "items": [],
+  "error": null,
+  "page_number": 2,
+  "total_pages_processed": 2,
+  "supplier": {
+    "name": "",
+    "address": "",
+    "phone": ""
+  },
+  "buyer": {
+    "name": "",
+    "address": "",
+    "phone": ""
+  },
+  "payment": {
+    "beneficiary_bank_name": "",
+    "beneficiary_bank_bik": "",
+    "beneficiary_account_iban": "",
+    "kbe": "",
+    "knp": "",
+    "payment_code": "",
+    "payment_purpose": "",
+    "beneficiary_bin_iin": null
+  },
+  "barcodes": []
+}

@@ -1,0 +1,67 @@
+{
+  "source_file": "invoices/Счет на оплату 00000584814 от 26.08.2023.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "081140001682",
+        "company_name": "ТОО VENDER",
+        "document_number": "Счет № 584814",
+        "document_date": "26 августа 2023",
+        "subtotal": "90 244",
+        "vat": "10 829",
+        "total": "101 073",
+        "items": [
+          {
+            "name": "Контактор, SE, LC1E2510Q5, 25А 1НО 380В 50ГЦ",
+            "sku": "41992",
+            "quantity": "10",
+            "unit": "шт",
+            "price": "7 920",
+            "total": "79200.00"
+          },
+          {
+            "name": "Батарея, SVC, Свинцово-кислотная VP1226/S 12В 26 Ач, Размер в мм.: 165*175*125",
+            "sku": "51517",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "21 873",
+            "total": "21873.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "ТОО VENDER",
+          "bin_iin": "081140001682",
+          "address": "Алматы, Нурсултана Назарбаева 19",
+          "phone": "+7 727 300 0 300"
+        },
+        "buyer": {
+          "name": "ТОО Michael",
+          "bin_iin": "170940023817",
+          "address": "",
+          "phone": ""
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+          "beneficiary_bank_bik": "KCJBKZKX",
+          "beneficiary_account_iban": "KZ568562203117839999",
+          "kbe": "17",
+          "knp": "710",
+          "beneficiary_bin_iin": "081140001682",
+          "payment_code": null,
+          "payment_purpose": null
+        },
+        "barcodes": [
+          "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000584814%22%2C%22date%22%3A%2226%2E08%2E2023%22%2C%22sum%22%3A101073%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22b67f550a%2D43d7%2D11ee%2Da3ea%2D503eaa0d10ba%22%7d",
+          "https://r.alstyle.kz/book",
+          "https://clc.to/alstyle_banner3"
+        ]
+      }
+    ],
+    "total_pages": 1
+  }
+}

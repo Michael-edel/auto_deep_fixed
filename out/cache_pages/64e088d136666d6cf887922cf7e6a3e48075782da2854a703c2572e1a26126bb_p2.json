@@ -1,0 +1,18 @@
+{
+  "document_type": "unknown",
+  "iin_bin": null,
+  "company_name": null,
+  "document_number": null,
+  "document_date": null,
+  "subtotal": null,
+  "vat": null,
+  "total": null,
+  "items": [],
+  "error": null,
+  "page_number": 2,
+  "total_pages_processed": 2,
+  "supplier": {},
+  "buyer": {},
+  "payment": {},
+  "barcodes": []
+}
