@@ -1,0 +1,44 @@
+{
+  "source_file": "invoices/Счет на оплату №30000037792 от 28.06.2022.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "unknown",
+        "iin_bin": null,
+        "company_name": "",
+        "document_number": "",
+        "document_date": "",
+        "subtotal": "",
+        "vat": "",
+        "total": "",
+        "items": [],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "",
+          "address": "",
+          "phone": ""
+        },
+        "buyer": {
+          "name": "",
+          "address": "",
+          "phone": ""
+        },
+        "payment": {
+          "beneficiary_bank_name": "",
+          "beneficiary_bank_bik": "",
+          "beneficiary_account_iban": "",
+          "kbe": "",
+          "knp": "",
+          "payment_code": "",
+          "payment_purpose": "",
+          "beneficiary_bin_iin": null
+        },
+        "barcodes": []
+      }
+    ],
+    "total_pages": 1
+  }
+}

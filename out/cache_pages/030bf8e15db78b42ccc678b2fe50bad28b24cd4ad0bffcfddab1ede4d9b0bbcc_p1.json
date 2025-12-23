@@ -1,0 +1,123 @@
+{
+  "document_type": "счет на оплату",
+  "iin_bin": "081140001682",
+  "company_name": "ТОО VENDER",
+  "document_number": "Счёт № 568248",
+  "document_date": "28 июля 2023",
+  "subtotal": "340248",
+  "vat": "36455",
+  "total": "340248",
+  "items": [
+    {
+      "name": "Тонер-картридж, Xerox, 006R01573, Для Xerox WorkCentre 5019/5021/5022/5024, 9 000 страниц (А4)",
+      "sku": "32446",
+      "quantity": "1 шт",
+      "unit": "шт",
+      "price": "18817",
+      "total": "18817.00"
+    },
+    {
+      "name": "Процессор, Intel, i5-12400 LGA1700, оем, 18M, 2.50 GHz, 6/12 Core Alder Lake, 65 (117) Вт, UHD730",
+      "sku": "41463",
+      "quantity": "1 шт",
+      "unit": "шт",
+      "price": "72562",
+      "total": "72562.00"
+    },
+    {
+      "name": "Материнская плата, Gigabyte, B660M GAMING DDR4 (4719331830809), LGA1700, iB660, 2xDDR4 2666/2933/3200, 4xSATA3, 2xM.2 (PCI-E 4.0x4/x2), Raid, 1xD-Sub, 1хDP, 1xHDMI, 1xPCI-Ex16, 1xPCI-Ex1, mATX",
+      "sku": "42794",
+      "quantity": "2 шт",
+      "unit": "шт",
+      "price": "47333",
+      "total": "94666.00"
+    },
+    {
+      "name": "Жёсткий диск, Toshiba, HDWD110UZSVA, HDD 1TB, SATA 6Gb/s, 3,5\", 64MB, 7200 RPM",
+      "sku": "21087",
+      "quantity": "1 шт",
+      "unit": "шт",
+      "price": "16040",
+      "total": "16040.00"
+    },
+    {
+      "name": "Твердотельный накопитель SSD, Apacer, AS2280P4 AP256GAS2280P4-1, 256 GB, M.2 NVMe PCIe 3.0x4, 3000/2000 Мб/с",
+      "sku": "38140",
+      "quantity": "2 шт",
+      "unit": "шт",
+      "price": "6952",
+      "total": "13904.00"
+    },
+    {
+      "name": "Модуль памяти, Apacer, EL.08G21.GSH, DDR4, 8GB, DIMM <PC4-25600/3200MHz>",
+      "sku": "39162",
+      "quantity": "1 шт",
+      "unit": "шт",
+      "price": "6752",
+      "total": "6752.00"
+    },
+    {
+      "name": "Кулер для процессора Intel, Deepcool, THETA 21 PWM DP-ICAP-T21P, Intel 1200/115х, 95W, 92мм, 900-2400±10% об/м, 45.91CFM, 17.8~33.4dB(A), 4pin, 100х100х60,5мм, Чёрный",
+      "sku": "16101",
+      "quantity": "2 шт",
+      "unit": "шт",
+      "price": "3319",
+      "total": "6638.00"
+    },
+    {
+      "name": "Компьютерный корпус, XG, XC-370PS-2, ATX/Micro ATX, USB 2.0x2,HD-Audio+Mic, Высота процессорного кулера 145мм, Длина VGA до 290мм, 1*5.25\"/2*3.5\"/2*2.5\", Толщина 0.4мм, 400x190x370мм, Б/П, 400W, Черный",
+      "sku": "39893",
+      "quantity": "2 шт",
+      "unit": "шт",
+      "price": "11700",
+      "total": "23400.00"
+    },
+    {
+      "name": "Процессор, Intel, i3-12100F LGA1700, оем, 12M, 3.30 GHz, 4/8 Core Alder Lake, 58 (89) Вт, без встроенного видео",
+      "sku": "41673",
+      "quantity": "1 шт",
+      "unit": "шт",
+      "price": "39730",
+      "total": "39730.00"
+    },
+    {
+      "name": "Монитор, X-game, OFLED27, 27\", IPS-матрица, VGA, HDMI, Аудиовход, LED, 250кд/м2, 1000:1, 5 мс, угол обзора(гор/верт)178/178, 1920*1080, 75 Гц, HDMI кабель в комплекте, Чёрный",
+      "sku": "47808",
+      "quantity": "1 шт",
+      "unit": "шт",
+      "price": "47739",
+      "total": "47739.00"
+    }
+  ],
+  "error": null,
+  "page_number": 1,
+  "total_pages_processed": 1,
+  "supplier": {
+    "name": "ТОО VENDER",
+    "bin_iin": "081140001682",
+    "address": "Алматы, Нурсултана Назарбаева 19",
+    "phone": "+7 727 300 0 300"
+  },
+  "buyer": {
+    "name": "ТОО Michael",
+    "bin_iin": "170940023817",
+    "address": "",
+    "phone": ""
+  },
+  "payment": {
+    "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+    "beneficiary_bank_bik": "KCJBKZKX",
+    "beneficiary_account_iban": "KZ568562203117839999",
+    "beneficiary_bin_iin": "null",
+    "kbe": "17",
+    "knp": "710",
+    "payment_code": "null",
+    "payment_purpose": "предоплата до отгрузки 3 дня"
+  },
+  "barcodes": [
+    "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000568248%22%2C%22date%22%3A%2228%2E07%2E2023%22%2C%22sum%22%3A340248%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%225dd843e3%2D2d37%2D11ee%2D9ec2%2D002590a8d62b%22%7d",
+    "https://r.alstyle.kz/book",
+    "https://clc.to/alstyle_banner2",
+    "4719331830809"
+  ]
+}

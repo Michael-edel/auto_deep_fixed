@@ -1,0 +1,231 @@
+{
+  "source_file": "invoices/Счет на оплату 00000566135 от 26.07.2023.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "081140001682",
+        "company_name": "ТОО VENDER",
+        "document_number": "566135",
+        "document_date": "26 июля 2023",
+        "subtotal": "312726",
+        "vat": "33506",
+        "total": "312726",
+        "items": [
+          {
+            "name": "Инвертор,  SVC,  SI-500,  Мощность  500ВА/500Вт,  Вход  12В/Выход 210-240В, 1 вых.: Shuko CEE7, Выход USB-порта 2А /5В (2100мА), Защита от перегрева, перегрузки, короткого замыкания, Чёрный",
+            "sku": "39129",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "12546",
+            "total": "12546.00"
+          },
+          {
+            "name": "Тонер-картридж  стандартный,  Xerox,  106R02721,  Для  Xerox  Phaser 3610DN, WorkCentre 3615DN, 5 900 страниц (А4)",
+            "sku": "33342",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "81974",
+            "total": "81974.00"
+          },
+          {
+            "name": "Автомат защиты двигателя, ANDELI, GV2-M06 (1-1.6A)",
+            "sku": "43272",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "3396",
+            "total": "6792.00"
+          },
+          {
+            "name": "Автомат защиты двигателя, ANDELI, GV2-M10 (4-6.3A)",
+            "sku": "43274",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "3370",
+            "total": "6740.00"
+          },
+          {
+            "name": "Автомат защиты двигателя, ANDELI, GV2-M16 (9-14A)",
+            "sku": "42893",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "3191",
+            "total": "3191.00"
+          },
+          {
+            "name": "Автомат защиты двигателя, ANDELI, GV2-M20 (13-18A)",
+            "sku": "42892",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "3363",
+            "total": "6726.00"
+          },
+          {
+            "name": "Автомат защиты двигателя, ANDELI, GV2-M21 (17-23A)",
+            "sku": "42894",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "3841",
+            "total": "7682.00"
+          },
+          {
+            "name": "Автомат защиты двигателя, ANDELI, GV2-M22 (20-25A)",
+            "sku": "42891",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "3367",
+            "total": "6734.00"
+          },
+          {
+            "name": "Автомат защиты двигателя, ANDELI, GV2-ME08 (2.5-4A)",
+            "sku": "43273",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "3363",
+            "total": "6726.00"
+          },
+          {
+            "name": "Автоматический выключатель, ANDELI, AM1-400L 3P 400A",
+            "sku": "42883",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "22079",
+            "total": "22079.00"
+          },
+          {
+            "name": "Картридж, Europrint, EPC-728, Для принтеров Canon i-SENSYS MF4410/4420/4430/4450/4550/4570/ 4580/4730/4870, 2100 страниц.",
+            "sku": "5574",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "2749",
+            "total": "2749.00"
+          },
+          {
+            "name": "Автоматический выключатель, DEKraft, 11054DEK, ВА101 1Р C 16A 4,5кА",
+            "sku": "47044",
+            "quantity": "48",
+            "unit": "шт",
+            "price": "421",
+            "total": "20208.00"
+          },
+          {
+            "name": "Автоматический выключатель, DEKraft, 11056DEK, ВА101 1Р C 25A 4,5кА",
+            "sku": "47046",
+            "quantity": "60",
+            "unit": "шт",
+            "price": "436",
+            "total": "26160.00"
+          },
+          {
+            "name": "Автоматический выключатель, DEKraft, 11057DEK, ВА101 1Р C 32A 4,5кА",
+            "sku": "47047",
+            "quantity": "48",
+            "unit": "шт",
+            "price": "457",
+            "total": "21936.00"
+          },
+          {
+            "name": "Автоматический выключатель, DEKraft, 11070DEK, ВА101 2Р C 40A 4,5кА",
+            "sku": "47061",
+            "quantity": "18",
+            "unit": "шт",
+            "price": "897",
+            "total": "16146.00"
+          },
+          {
+            "name": "Автоматический выключатель, DEKraft, 11053DEK, ВА101 1Р C 10A 4,5кА",
+            "sku": "47043",
+            "quantity": "12",
+            "unit": "шт",
+            "price": "433",
+            "total": "5196.00"
+          },
+          {
+            "name": "Источник бесперебойного питания, SVC, V-800-L, Мощность 800ВА/480Вт, Диапазон работы AVR: 165-275В, AVR в режиме Booster: 138-292В, Бат.: 12В/9 Ач*1шт., 3 вых.: 2 Shuko CEE7+1 IEC C13 (Bypass), Чёрный",
+            "sku": "14466",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "21100",
+            "total": "42200.00"
+          },
+          {
+            "name": "Колодка клемная карболитовая, ANDELI, TB - 2506 (25A 6P)",
+            "sku": "18740",
+            "quantity": "10",
+            "unit": "шт",
+            "price": "260",
+            "total": "2600.00"
+          },
+          {
+            "name": "Гарнитура,  Microlab,  K290,  Выходная  мощность  50мВт,Тип  крепления: Дуговые, Микрофон, 3,5 MiniJack*2, Регулятор громкости, Длина кабеля 2м, Чёрный",
+            "sku": "17370",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "4100",
+            "total": "8200.00"
+          },
+          {
+            "name": "Переходник, iPower, HDVGAB, HDMI на VGA, Чёрный",
+            "sku": "24691",
+            "quantity": "3",
+            "unit": "шт",
+            "price": "2047",
+            "total": "6141.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 2,
+        "supplier": {
+          "name": "ТОО VENDER",
+          "bin_iin": "081140001682",
+          "address": "Алматы, Нурсултана Назарбаева 19",
+          "phone": "+7 727 300 0 300"
+        },
+        "buyer": {
+          "name": "ТОО Michael",
+          "bin_iin": "170940023817",
+          "address": "",
+          "phone": ""
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+          "beneficiary_bank_bik": "KCJBKZKX",
+          "beneficiary_account_iban": "KZ568562203117839999",
+          "beneficiary_bin_iin": "null",
+          "kbe": "17",
+          "knp": "710",
+          "payment_code": "null",
+          "payment_purpose": "null"
+        },
+        "barcodes": [
+          "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000566135%22%2C%22date%22%3A%2226%2E07%2E2023%22%2C%22sum%22%3A312726%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22f267d048%2D2b63%2D11ee%2Da3e7%2D503eaa0d10ba%22%7d",
+          "https://r.alstyle.kz/book",
+          "https://clc.to/alstyle_banner2"
+        ]
+      },
+      {
+        "document_type": "unknown",
+        "iin_bin": null,
+        "company_name": "ВЕНДЕР",
+        "document_number": "",
+        "document_date": "",
+        "subtotal": "",
+        "vat": "",
+        "total": "",
+        "items": [],
+        "error": null,
+        "page_number": 2,
+        "total_pages_processed": 2,
+        "supplier": {
+          "name": "ВЕНДЕР"
+        },
+        "buyer": {},
+        "payment": {},
+        "barcodes": []
+      }
+    ],
+    "total_pages": 2
+  }
+}

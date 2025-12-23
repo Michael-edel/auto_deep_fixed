@@ -1,0 +1,55 @@
+{
+  "pages": [
+    {
+      "document_type": "счет на оплату",
+      "iin_bin": "081140001682",
+      "company_name": "ТОО Vender",
+      "document_number": "343769",
+      "document_date": "10 июня 2022",
+      "subtotal": "16977.68",
+      "vat": "2133.32",
+      "total": "19911",
+      "items": [
+        {
+          "name": "Фитнес браслет, Xiaomi, Mi Smart Band 7, 1.62\" AMOLED, Разрешение экрана 192 x 490, Аккумулятор 180 мАч, Водонепроницаемость 5 АТМ, Черный",
+          "sku": "43010",
+          "quantity": "1",
+          "unit": "шт",
+          "price": "19911",
+          "total": "19911.00"
+        }
+      ],
+      "error": null,
+      "page_number": 1,
+      "total_pages_processed": 1,
+      "supplier": {
+        "name": "ТОО Vender",
+        "bin_iin": "081140001682",
+        "address": "Алматы, Нурсултана Назарбаева 19",
+        "phone": "+7 727 300 0 300"
+      },
+      "buyer": {
+        "name": "ТОО Michael",
+        "bin_iin": "170940023817",
+        "address": "",
+        "phone": ""
+      },
+      "payment": {
+        "beneficiary_bank_name": "АО Народный Банк Казахстана",
+        "beneficiary_bank_bik": "HSBKKZKX",
+        "beneficiary_account_iban": "KZ986017131000008308",
+        "kbe": "17",
+        "knp": "710",
+        "beneficiary_bin_iin": "081140001682",
+        "payment_code": null,
+        "payment_purpose": null
+      },
+      "barcodes": [
+        "https://order.al-style.kz/assembly?data=%7b%22id%22:%2200000343769%22,%22date%22:%2210.06.2022%22,%22sum%22:19911,%22company_id%22:%22170940023817%22,%22GUID%22:%22f8b56811-e897-11ec-bc55-00505693d21a%22%7d",
+        "https://r.alstyle.kz/book",
+        "https://r.alstyle.kz/banner5"
+      ]
+    }
+  ],
+  "total_pages": 1
+}

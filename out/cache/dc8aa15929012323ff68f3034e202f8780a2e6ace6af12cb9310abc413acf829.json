@@ -1,0 +1,55 @@
+{
+  "pages": [
+    {
+      "document_type": "счет на оплату",
+      "iin_bin": "081140001682",
+      "company_name": "ТОО VENDER",
+      "document_number": "612771",
+      "document_date": "11 октября 2023",
+      "subtotal": "56 630",
+      "vat": "6 068",
+      "total": "56 630",
+      "items": [
+        {
+          "name": "Инвертор, SVC, DIL-1200, Мощность 1200ВА/1000Вт, Вход 12В и/или 220В, Выход 220В, (Чистая синусоида на выходе), Функция заряда батарей 20A, Чёрный",
+          "sku": "14742",
+          "quantity": "1",
+          "unit": "шт",
+          "price": "56 630",
+          "total": "56630.00"
+        }
+      ],
+      "error": null,
+      "page_number": 1,
+      "total_pages_processed": 1,
+      "supplier": {
+        "name": "ТОО VENDER",
+        "bin_iin": "081140001682",
+        "address": "Алматы, Нурсултана Назарбаева 19",
+        "phone": "+7 727 300 0 300"
+      },
+      "buyer": {
+        "name": "ТОО Michael",
+        "bin_iin": "170940023817",
+        "address": "",
+        "phone": ""
+      },
+      "payment": {
+        "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+        "beneficiary_bank_bik": "KCJBKZKX",
+        "beneficiary_account_iban": "KZ568562203117839999",
+        "kbe": "17",
+        "knp": "710",
+        "beneficiary_bin_iin": "081140001682",
+        "payment_code": null,
+        "payment_purpose": null
+      },
+      "barcodes": [
+        "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000612771%22%2C%22date%22%3A%2211%2E10%2E2023%22%2C%22sum%22%3A56630%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22f5154cfd%2D67ef%2D11ee%2Da834%2D002590a8d631%22%7d",
+        "https://r.alstyle.kz/book",
+        "https://clc.to/alstyle_banner2"
+      ]
+    }
+  ],
+  "total_pages": 1
+}

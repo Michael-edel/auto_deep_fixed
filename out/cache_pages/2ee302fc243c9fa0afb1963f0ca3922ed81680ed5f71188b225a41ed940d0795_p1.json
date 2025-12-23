@@ -1,0 +1,74 @@
+{
+  "document_type": "счет на оплату",
+  "iin_bin": "081140001682",
+  "company_name": "ТОО VENDER",
+  "document_number": "602798",
+  "document_date": "25 сентября 2023",
+  "subtotal": "101 906",
+  "vat": "12 229",
+  "total": "114 135",
+  "items": [
+    {
+      "name": "Контактор, ANDELI, CJX2-D09 AC 220V, 1HO",
+      "sku": "14573",
+      "quantity": "10",
+      "unit": "шт",
+      "price": "1 291",
+      "total": "12910.00"
+    },
+    {
+      "name": "Контактор, ANDELI, CJX2-D25 AC 220V, 1HO",
+      "sku": "14576",
+      "quantity": "5",
+      "unit": "шт",
+      "price": "2 091",
+      "total": "10455.00"
+    },
+    {
+      "name": "Контактор, ANDELI, CJX2-D32 AC 220V, 1HO",
+      "sku": "14577",
+      "quantity": "5",
+      "unit": "шт",
+      "price": "2 194",
+      "total": "10970.00"
+    },
+    {
+      "name": "Инвертор, SVC, DI-600-F-LCD, Мощность 600ВА/360Вт, Вход 12В и/или 220В, Выход 220В (Чистая синусоида на выходе), Диапазон работы AVR: 145-270В, Функция заряда батарей 10A, Чёрный",
+      "sku": "7474",
+      "quantity": "2",
+      "unit": "шт",
+      "price": "39 900",
+      "total": "79800.00"
+    }
+  ],
+  "error": null,
+  "page_number": 1,
+  "total_pages_processed": 1,
+  "supplier": {
+    "name": "ТОО VENDER",
+    "bin_iin": "081140001682",
+    "address": "Алматы, Нурсултана Назарбаева 19",
+    "phone": "+7 727 300 0 300"
+  },
+  "buyer": {
+    "name": "ТОО Michael",
+    "bin_iin": "170940023817",
+    "address": "",
+    "phone": ""
+  },
+  "payment": {
+    "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+    "beneficiary_bank_bik": "KCJBKZKX",
+    "beneficiary_account_iban": "KZ568562203117839999",
+    "kbe": "17",
+    "knp": "710",
+    "beneficiary_bin_iin": "081140001682",
+    "payment_code": null,
+    "payment_purpose": null
+  },
+  "barcodes": [
+    "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000602798%22%2C%22date%22%3A%2225%2E09%2E2023%22%2C%22sum%22%3A114135%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22684544b4%2D5b82%2D11ee%2Da834%2D002590a8d631%22%7d",
+    "https://r.alstyle.kz/book",
+    "https://r.alstyle.kz/banner3"
+  ]
+}

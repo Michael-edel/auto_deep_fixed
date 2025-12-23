@@ -1,0 +1,75 @@
+{
+  "source_file": "invoices/Счет на оплату 00000546671 от 20.06.2023.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "081140001682",
+        "company_name": "ТОО VENDER",
+        "document_number": "546671",
+        "document_date": "20 июня 2023",
+        "subtotal": "179 060",
+        "vat": "19 185,00",
+        "total": "179 060",
+        "items": [
+          {
+            "name": "Модуль  памяти  для  ноутбука,  Patriot,  SL  PSD34G13332S  DDR3,  4GB,  SO-DIMM <PC3-10600/1333MHz>",
+            "sku": "50123",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "4 844",
+            "total": "4844.00"
+          },
+          {
+            "name": "Батарея,  SVC,  AV9-12/S,  Свинцово-кислотная  12В  9  Ач,  Вес:  2,5  кг,  Размер  в  мм.: 151*65*100",
+            "sku": "38388",
+            "quantity": "8",
+            "unit": "шт",
+            "price": "8 402",
+            "total": "67216.00"
+          },
+          {
+            "name": "Планшет, Redmi, PAD, 10.61\", LCD IPS, 2000х1200, MIUI for PAD, MediaTek Helio G99, 4GB LPDDR4, 8000 mAh, 128GB, 8MPx/8MPx, Fast Charge 18W, (Graphite Gray) Серый",
+            "sku": "45769",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "107 000",
+            "total": "107000.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "ТОО VENDER",
+          "bin_iin": "081140001682",
+          "address": "Алматы, Нурсултана Назарбаева 19",
+          "phone": "+7 727 300 0 300"
+        },
+        "buyer": {
+          "name": "ТОО Michael",
+          "bin_iin": "170940023817",
+          "address": "",
+          "phone": ""
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+          "beneficiary_bank_bik": "KCJBKZKX",
+          "beneficiary_account_iban": "KZ568562203117839999",
+          "beneficiary_bin_iin": "null",
+          "kbe": "17",
+          "knp": "710",
+          "payment_code": "null",
+          "payment_purpose": "null"
+        },
+        "barcodes": [
+          "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000546671%22%2C%22date%22%3A%2220%2E06%2E2023%22%2C%22sum%22%3A179060%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%2217e5371a%2D0f47%2D11ee%2Da822%2D002590a8d631%22%7d",
+          "https://r.alstyle.kz/book",
+          "https://clc.to/alstyle_banner3"
+        ]
+      }
+    ],
+    "total_pages": 1
+  }
+}

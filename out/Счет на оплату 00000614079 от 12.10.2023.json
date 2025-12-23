@@ -1,0 +1,75 @@
+{
+  "source_file": "invoices/Счет на оплату 00000614079 от 12.10.2023.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "081140001682",
+        "company_name": "ТОО VENDER",
+        "document_number": "614079",
+        "document_date": "12 октября 2023",
+        "subtotal": "150 280",
+        "vat": "18 034",
+        "total": "168 314",
+        "items": [
+          {
+            "name": "Батарейка, CAMELION, CR2032-BP5, Lithium Battery, CR2032, 3V, 220 mAh, 5 шт. в блитсере",
+            "sku": "8622",
+            "quantity": "10",
+            "unit": "шт",
+            "price": "594",
+            "total": "5940.00"
+          },
+          {
+            "name": "Процессор, Intel, i5-12400 LGA1700, оем, 18M, 2.50 GHz, 6/12 Core Alder Lake, 65 (117) Вт, UHD730",
+            "sku": "41463",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "78205",
+            "total": "156410.00"
+          },
+          {
+            "name": "Картридж, Europrint, EPC-CF283A, Для принтеров HP LaserJet Pro M125/M126/M127/M128/M201/M225, 1500 страниц.",
+            "sku": "10367",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "2982",
+            "total": "5964.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "ТОО VENDER",
+          "bin_iin": "081140001682",
+          "address": "Алматы, Нурсултана Назарбаева 19",
+          "phone": "+7 727 300 0 300"
+        },
+        "buyer": {
+          "name": "ТОО Michael",
+          "bin_iin": "170940023817",
+          "address": "",
+          "phone": ""
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+          "beneficiary_bank_bik": "KCJBKZKX",
+          "beneficiary_account_iban": "KZ568562203117839999",
+          "kbe": "17",
+          "knp": "710",
+          "beneficiary_bin_iin": "081140001682",
+          "payment_code": null,
+          "payment_purpose": null
+        },
+        "barcodes": [
+          "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000614079%22%2C%22date%22%3A%2212%2E10%2E2023%22%2C%22sum%22%3A168314%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22ec23b8ff%2D68e5%2D11ee%2D9ec8%2D002590a8d62b%22%7d",
+          "https://r.alstyle.kz/book",
+          "https://r.alstyle.kz/banner5"
+        ]
+      }
+    ],
+    "total_pages": 1
+  }
+}

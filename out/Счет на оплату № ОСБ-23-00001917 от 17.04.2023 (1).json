@@ -1,0 +1,95 @@
+{
+  "source_file": "invoices/Счет на оплату № ОСБ-23-00001917 от 17.04.2023 (1).pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "061040005628",
+        "company_name": "Товарищество с ограниченной ответственностью \"Direct Distribution Company\"",
+        "document_number": "ОСБ-23-00001917",
+        "document_date": "17.04.2023",
+        "subtotal": "92683,00",
+        "vat": "9930,32",
+        "total": "102613,32",
+        "items": [
+          {
+            "name": "Настенная установка обратного осмоса бескорпусная RO50-A (ручной режим, 11л.)",
+            "sku": "",
+            "quantity": "1",
+            "unit": "шт.",
+            "price": "42863,00",
+            "total": "42863.00"
+          },
+          {
+            "name": "Картридж полипропиленовый PP-10 (Slim Line, 5 мик)",
+            "sku": "",
+            "quantity": "10",
+            "unit": "шт.",
+            "price": "423,00",
+            "total": "4230.00"
+          },
+          {
+            "name": "Картридж с гранулированным углем GAC-10 (Slim Line) white",
+            "sku": "",
+            "quantity": "10",
+            "unit": "шт.",
+            "price": "1104,00",
+            "total": "11040.00"
+          },
+          {
+            "name": "Картридж с прессованным углем CTO-10 (Slim Line) blue/white",
+            "sku": "",
+            "quantity": "10",
+            "unit": "шт.",
+            "price": "874,00",
+            "total": "8740.00"
+          },
+          {
+            "name": "Картридж №2 с гранулированным углем QM-GAC 1/4\"резьба (f) х 1/4\"резьба (f)",
+            "sku": "",
+            "quantity": "10",
+            "unit": "шт.",
+            "price": "1523,00",
+            "total": "15230.00"
+          },
+          {
+            "name": "Картридж пост-фильтр T33 1/4\"резьба (f) х 1/4\"резьба (f)",
+            "sku": "",
+            "quantity": "10",
+            "unit": "шт.",
+            "price": "1058,00",
+            "total": "10580.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "Товарищество с ограниченной ответственностью \"Direct Distribution Company\"",
+          "bin_iin": "061040005628",
+          "address": "Республика Казахстан, г. Алматы, мкр. Атырау, д.60",
+          "phone": "+7 (727) 225 55 22"
+        },
+        "buyer": {
+          "name": "Товарищество с ограниченной ответственностью «Michael»",
+          "bin_iin": "170940023817",
+          "address": "Республика Казахстан, Павлодарская обл., г.Экибастуз, ул.Абая, здание 60/1, офис 113",
+          "phone": "+7 (718) 774-08-64"
+        },
+        "payment": {
+          "beneficiary_bank_name": "Филиал АО \"ForteBank\" в г. Алматы",
+          "beneficiary_bank_bik": "IRTYKZKA",
+          "beneficiary_account_iban": "KZ279650200008024418",
+          "beneficiary_bin_iin": "061040005628",
+          "kbe": "17",
+          "knp": "710",
+          "payment_code": null,
+          "payment_purpose": null
+        },
+        "barcodes": []
+      }
+    ],
+    "total_pages": 1
+  }
+}

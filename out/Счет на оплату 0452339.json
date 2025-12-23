@@ -1,0 +1,45 @@
+{
+  "source_file": "invoices/Счет на оплату 0452339.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "unknown",
+        "iin_bin": null,
+        "company_name": null,
+        "document_number": null,
+        "document_date": null,
+        "subtotal": null,
+        "vat": null,
+        "total": null,
+        "items": [],
+        "error": "Ошибка при анализе документа: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-mini in organization org-OJmttXjY0iLrFvOLZR0HQWHf on tokens per min (TPM): Limit 200000, Used 200000, Requested 2126. Please try again in 637ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}",
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "Товарищество с ограниченной ответственностью \"MARVEL KAZAKHSTAN\" (МАРВЕЛ",
+          "bin_iin": "600700596712",
+          "address": "Республика Казахстан, г.Алматы, ул.",
+          "phone": null
+        },
+        "buyer": {
+          "name": "Товарищество с ограниченной ответственностью \"Michael\",PHH 170940023817, БИН",
+          "bin_iin": "170940023817",
+          "address": null,
+          "phone": "8(7187)740864"
+        },
+        "payment": {
+          "beneficiary_bank_name": "Банк бенефициара:",
+          "beneficiary_bank_bik": "SABRKZKA",
+          "beneficiary_account_iban": "KZ67914002203KZ0066V",
+          "beneficiary_bin_iin": "600700596712",
+          "kbe": null,
+          "payment_code": null,
+          "payment_purpose": "Оплата данного счета означает согласие с условиями поставки товара. Уведомление об оплате"
+        },
+        "barcodes": []
+      }
+    ],
+    "total_pages": 1
+  }
+}

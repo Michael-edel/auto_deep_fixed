@@ -1,0 +1,55 @@
+{
+  "source_file": "invoices/Счет на оплату № ЦБ-26757 от 27.09.2022.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "200140008545",
+        "company_name": "ТОО «Terra Alatau»",
+        "document_number": "ЦБ-26757",
+        "document_date": "27 сентября 2022 г.",
+        "subtotal": "151800,00",
+        "vat": "16264,29",
+        "total": "151800,00",
+        "items": [
+          {
+            "name": "Монитор 21,5\" AOC  E2270SWN TN D-Sub 200cd/m2 700:1 20M:1 5ms 110/75 1920x1080@60Hz Черный",
+            "sku": "E2270SWN",
+            "quantity": "3",
+            "unit": "шт",
+            "price": "50600,00",
+            "total": "151800.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "ТОО «Terra Alatau»",
+          "bin_iin": "200140008545",
+          "address": "",
+          "phone": ""
+        },
+        "buyer": {
+          "name": "ТОО \"Michael\"",
+          "bin_iin": "170940023817",
+          "address": "141200, Республика Казахстан, Павлодарская обл., г.Экибастуз, ул.Абая, здание 60/1, офис 113",
+          "phone": ""
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"Forte Bank\"",
+          "beneficiary_bank_bik": "IRTYKZKA",
+          "beneficiary_account_iban": "KZ3696502F0011962888",
+          "beneficiary_bin_iin": "200140008545",
+          "kbe": "17",
+          "knp": "710",
+          "payment_code": "ЗК2209TAЦБ0267570009",
+          "payment_purpose": "Оплата по заказу клиента №ЦБ-26757"
+        },
+        "barcodes": []
+      }
+    ],
+    "total_pages": 1
+  }
+}

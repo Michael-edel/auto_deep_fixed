@@ -1,0 +1,99 @@
+{
+  "document_type": "счет на оплату",
+  "iin_bin": "081140001682",
+  "company_name": "ТОО VENDER",
+  "document_number": "545886",
+  "document_date": "19 июня 2023",
+  "subtotal": "455 280",
+  "vat": "54 634",
+  "total": "509 914",
+  "items": [
+    {
+      "name": "Картридж, Colorfix, CE285A/CB435A/CB436A/725, Для принтеров HP LaserJet P1102/M1132/M1212/P1005/P1006/P1505/M1120/M1522/LBP-6000/6020/603",
+      "sku": "18118",
+      "quantity": "1",
+      "unit": "шт",
+      "price": "2 624",
+      "total": "2624.00"
+    },
+    {
+      "name": "Материнская плата, Gigabyte, H610M H DDR4 (4719331830465), LGA1700, iH610, 2xDDR4 3200/2933/2666MHz, 4xSATA3, 1xM.2 (PCI-E 3.0x4/x2), 1xD-Sub, 1xHDMI, 1xPCI-Ex16, 1xPCI-Ex1, mATX",
+      "sku": "41484",
+      "quantity": "5",
+      "unit": "шт",
+      "price": "35 270",
+      "total": "176350.00"
+    },
+    {
+      "name": "Кулер для процессора, Deepcool, ALTA 9 PWM 1700 DP-ICAP-AT9-17, Intel 1700, 65W, 92мм, 500-2200±10% об/м, 38.51CFM, 31.8dB(A), 4pin, 123х123х69мм, Чёрный",
+      "sku": "45239",
+      "quantity": "4",
+      "unit": "шт",
+      "price": "2 510",
+      "total": "10040.00"
+    },
+    {
+      "name": "Компьютерный корпус, XG, XC-370PS-2, ATX/Micro ATX, USB 2.0x2,HD-Audio+Mic, Высота процессорного кулера 145мм, Длина VGA до 290мм, 1*5.25\"/2*3.5\"/2*2.5\", Толщина 0.4мм, 400x190x370мм, Б/П, 400W, Черный",
+      "sku": "39893",
+      "quantity": "4",
+      "unit": "шт",
+      "price": "11 700",
+      "total": "46800.00"
+    },
+    {
+      "name": "Твердотельный накопитель SSD, Gigabyte, 2500E G325E500G, 500 GB, M.2 NVMe PCIe 3.0, 2300/1500 Мб/с",
+      "sku": "49722",
+      "quantity": "4",
+      "unit": "шт",
+      "price": "11 010",
+      "total": "44040.00"
+    },
+    {
+      "name": "Модуль памяти, Apacer, EL.08G2V.GNH, DDR4, 8GB, DIMM <PC4-21300/2666MHz>",
+      "sku": "34142",
+      "quantity": "4",
+      "unit": "шт",
+      "price": "7 100",
+      "total": "28400.00"
+    },
+    {
+      "name": "Процессор, Intel, i3-12100 LGA1700, OEM, 12M, 3.30 GHz, 4/8 Core Alder Lake, 60 (89) Вт, UHD730",
+      "sku": "42127",
+      "quantity": "4",
+      "unit": "шт",
+      "price": "50 415",
+      "total": "201660.00"
+    }
+  ],
+  "error": null,
+  "page_number": 1,
+  "total_pages_processed": 1,
+  "supplier": {
+    "name": "ТОО VENDER",
+    "bin_iin": "081140001682",
+    "address": "Алматы, Нурсултана Назарбаева 19",
+    "phone": "+7 727 300 0 300"
+  },
+  "buyer": {
+    "name": "ТОО Michael",
+    "bin_iin": "170940023817",
+    "address": "",
+    "phone": ""
+  },
+  "payment": {
+    "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+    "beneficiary_bank_bik": "KCJBKZKX",
+    "beneficiary_account_iban": "KZ568562203117839999",
+    "beneficiary_bin_iin": "081140001682",
+    "kbe": "17",
+    "knp": "710",
+    "payment_code": "",
+    "payment_purpose": ""
+  },
+  "barcodes": [
+    "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000545886%22%2C%22date%22%3A%2219%2E06%2E2023%22%2C%22sum%22%3A509914%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22f5f9cf58%2D0e82%2D11ee%2D9ebb%2D002590a8d62b%22%7d",
+    "https://r.alstyle.kz/book",
+    "https://clc.to/alstyle_banner3",
+    "4719331830465"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "document_type": "unknown",
+  "iin_bin": null,
+  "company_name": "ВЕНДЕР",
+  "document_number": "",
+  "document_date": "",
+  "subtotal": "",
+  "vat": "",
+  "total": "",
+  "items": [],
+  "error": null,
+  "page_number": 2,
+  "total_pages_processed": 2,
+  "supplier": {
+    "name": "",
+    "address": "",
+    "phone": ""
+  },
+  "buyer": {
+    "name": "",
+    "address": "",
+    "phone": ""
+  },
+  "payment": {},
+  "barcodes": []
+}

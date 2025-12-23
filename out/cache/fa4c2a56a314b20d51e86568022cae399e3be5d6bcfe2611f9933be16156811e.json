@@ -1,0 +1,58 @@
+{
+  "pages": [
+    {
+      "document_type": "счет на оплату",
+      "iin_bin": "1712400029990",
+      "company_name": "Товарищество с ограниченной ответственностью \"Аквилон Трейд\"",
+      "document_number": "НП В-2182",
+      "document_date": "25 июля 2024 г.",
+      "subtotal": "26453,00",
+      "vat": "2834,25",
+      "total": "26453,00",
+      "items": [
+        {
+          "name": "WERNER Gipsputz зигзагообразный 30 кг",
+          "sku": null,
+          "quantity": "7",
+          "unit": "шт.",
+          "price": "3543,29",
+          "total": "24803.03"
+        },
+        {
+          "name": "Стандартная доставка 500 кг (2х куб)",
+          "sku": null,
+          "quantity": "1",
+          "unit": "шт.",
+          "price": "1650,00",
+          "total": "1650.00"
+        }
+      ],
+      "error": null,
+      "page_number": 1,
+      "total_pages_processed": 1,
+      "supplier": {
+        "name": "Товарищество с ограниченной ответственностью \"Аквилон Трейд\"",
+        "bin_iin": "1712400029990",
+        "address": "Павлодарская обл., г. Экибастуз, ул. Железнодорожная задина 30",
+        "phone": "+7 (705) 707-44-45"
+      },
+      "buyer": {
+        "name": "Товарищество с ограниченной ответственностью \"Michael\"",
+        "bin_iin": "1709400023187",
+        "address": "Павлодарская обл., г. Экибастуз, ул. Абая, здание 6/01, офис 113"
+      },
+      "payment": {
+        "beneficiary_bank_name": "АО \"Народный Банк Казахстана\"",
+        "beneficiary_bank_bik": "HSBKZKZK",
+        "beneficiary_account_iban": "KZ2556017361000000347",
+        "kbe": "17",
+        "knp": "710",
+        "payment_purpose": "Оплата по заказу клиента НПВ-220281",
+        "beneficiary_bin_iin": null,
+        "payment_code": null
+      },
+      "barcodes": []
+    }
+  ],
+  "total_pages": 1
+}

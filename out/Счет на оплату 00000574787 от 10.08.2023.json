@@ -1,0 +1,107 @@
+{
+  "source_file": "invoices/Счет на оплату 00000574787 от 10.08.2023.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "081140001682",
+        "company_name": "ТОО VENDER",
+        "document_number": "574787",
+        "document_date": "10 августа 2023",
+        "subtotal": "155 629",
+        "vat": "16 675",
+        "total": "172 304",
+        "items": [
+          {
+            "name": "Автоматический выключатель, DEKraft, 11056DEK, ВА101 1Р C 25A 4,5кА",
+            "sku": "47046",
+            "quantity": "24",
+            "unit": "шт",
+            "price": "436",
+            "total": "10464.00"
+          },
+          {
+            "name": "Автоматический выключатель, ANDELI, AM1-400L 3P 400A",
+            "sku": "42883",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "22 079",
+            "total": "44158.00"
+          },
+          {
+            "name": "Контактор, ANDELI, CJX2-D32 AC 220V, 1HO",
+            "sku": "14577",
+            "quantity": "20",
+            "unit": "шт",
+            "price": "2 194",
+            "total": "43880.00"
+          },
+          {
+            "name": "Кнопка открытая, ANDELI, ХВ2-ВА31, (зелёная)",
+            "sku": "14905",
+            "quantity": "20",
+            "unit": "шт",
+            "price": "329",
+            "total": "6580.00"
+          },
+          {
+            "name": "Твердотельный накопитель SSD, Apacer, AS350X AP256GAS350XR-1, 256 GB, SATA, 560/540 Мб/с",
+            "sku": "38120",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "6 353",
+            "total": "6353.00"
+          },
+          {
+            "name": "Реле контроля фаз напряжения, ANDELI, XJ11, 380V, (аналог РКФ-11, ЕЛ-11М)",
+            "sku": "14592",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "4 997",
+            "total": "9994.00"
+          },
+          {
+            "name": "Батарея, SVC, Свинцово-кислотная VP1220/S 12В 20 Ач, Размер в мм.: 180*77*167",
+            "sku": "51514",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "17 100",
+            "total": "34200.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "ТОО VENDER",
+          "bin_iin": "081140001682",
+          "address": "Алматы, Нурсултана Назарбаева 19",
+          "phone": "+7 727 300 0 300"
+        },
+        "buyer": {
+          "name": "ТОО Michael",
+          "bin_iin": "170940023817",
+          "address": "",
+          "phone": ""
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+          "beneficiary_bank_bik": "KCJBKZKX",
+          "beneficiary_account_iban": "KZ568562203117839999",
+          "kbe": "17",
+          "knp": "710",
+          "beneficiary_bin_iin": "081140001682",
+          "payment_code": null,
+          "payment_purpose": null
+        },
+        "barcodes": [
+          "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000574787%22%2C%22date%22%3A%2210%2E08%2E2023%22%2C%22sum%22%3A155629%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%226c072360%2D372b%2D11ee%2D9ec3%2D002590a8d62b%22%7d",
+          "https://r.alstyle.kz/book",
+          "https://r.alstyle.kz/banner3"
+        ]
+      }
+    ],
+    "total_pages": 1
+  }
+}

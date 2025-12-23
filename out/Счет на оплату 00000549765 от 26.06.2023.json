@@ -1,0 +1,123 @@
+{
+  "source_file": "invoices/Счет на оплату 00000549765 от 26.06.2023.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "081140001682",
+        "company_name": "ТОО VENDER",
+        "document_number": "549765",
+        "document_date": "26 июня 2023",
+        "subtotal": "176 042",
+        "vat": "18 862",
+        "total": "176 042",
+        "items": [
+          {
+            "name": "Монитор, X-game, OFLED27, 27\", IPS-матрица, VGA, HDMI, Аудиовход, LED, 250кд/м2, 1000:1, 5 мс, угол обзора(гор/верт)178/178, 1920*1080, 75 Гц, HDMI кабель в комплекте, Чёрный",
+            "sku": "47808",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "51 016",
+            "total": "102032.00"
+          },
+          {
+            "name": "Фитинг, ANDELI, PG 19 (11~17 мм), IP54",
+            "sku": "20480",
+            "quantity": "20",
+            "unit": "шт",
+            "price": "41",
+            "total": "820.00"
+          },
+          {
+            "name": "Фитинг, ANDELI, PG 21 (13~18 мм)",
+            "sku": "16609",
+            "quantity": "40",
+            "unit": "шт",
+            "price": "54",
+            "total": "2160.00"
+          },
+          {
+            "name": "Фитинг, ANDELI, PG 29 (18~25 мм)",
+            "sku": "16610",
+            "quantity": "20",
+            "unit": "шт",
+            "price": "94",
+            "total": "1880.00"
+          },
+          {
+            "name": "Фитинг, ANDELI, PG 48 (37~44 мм), IP54",
+            "sku": "18744",
+            "quantity": "10",
+            "unit": "шт",
+            "price": "354",
+            "total": "3540.00"
+          },
+          {
+            "name": "Твердотельный накопитель SSD, Apacer, AS2280P4 AP256GAS2280P4-1, 256 GB, M.2 NVMe PCIe 3.0x4, 3000/2000 Мб/с",
+            "sku": "38140",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "7 020",
+            "total": "7020.00"
+          },
+          {
+            "name": "Сетевой фильтр, SVC, ZC6S-30M, 6 розеток, 3 метра, 220-250В, 10A, картонная коробка, чёрный",
+            "sku": "43723",
+            "quantity": "10",
+            "unit": "шт",
+            "price": "2 026",
+            "total": "20260.00"
+          },
+          {
+            "name": "Сетевой фильтр, SVC, ZC6S-50M, 6 розеток, 5 метров, 220-250В, 10A, картонная коробка, чёрный",
+            "sku": "43727",
+            "quantity": "10",
+            "unit": "шт",
+            "price": "2 190",
+            "total": "21900.00"
+          },
+          {
+            "name": "Сетевой фильтр, SVC, ZC5S-18M, 5 розеток, 1.8 метров, 220-250В, 10A, картонная коробка, чёрный",
+            "sku": "44312",
+            "quantity": "10",
+            "unit": "шт",
+            "price": "1 643",
+            "total": "16430.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "ТОО VENDER",
+          "bin_iin": "081140001682",
+          "address": "Алматы, Нурсултана Назарбаева 19",
+          "phone": "+7 727 300 0 300"
+        },
+        "buyer": {
+          "name": "ТОО Michael",
+          "bin_iin": "170940023817",
+          "address": "",
+          "phone": ""
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+          "beneficiary_bank_bik": "KCJBKZKX",
+          "beneficiary_account_iban": "KZ568562203117839999",
+          "beneficiary_bin_iin": "null",
+          "kbe": "17",
+          "knp": "710",
+          "payment_code": "null",
+          "payment_purpose": "null"
+        },
+        "barcodes": [
+          "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000549765%22%2C%22date%22%3A%2226%2E06%2E2023%22%2C%22sum%22%3A176042%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22bba5ca11%2D13f7%2D11ee%2Da3e4%2D503eaa0d10ba%22%7d",
+          "https://r.alstyle.kz/book",
+          "https://r.alstyle.kz/banner2"
+        ]
+      }
+    ],
+    "total_pages": 1
+  }
+}

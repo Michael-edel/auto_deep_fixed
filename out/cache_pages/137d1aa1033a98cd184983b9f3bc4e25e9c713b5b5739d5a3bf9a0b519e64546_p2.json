@@ -1,0 +1,55 @@
+{
+  "document_type": "счет на оплату",
+  "iin_bin": null,
+  "company_name": "unknown",
+  "document_number": "N31435340",
+  "document_date": "03.12.2021",
+  "subtotal": "725 000,39",
+  "vat": "0,00",
+  "total": "725 000,39",
+  "items": [
+    {
+      "name": "Выключатель автоматический 3п 250А 35кА ВА 88-35 IEK SVA30-3-0250",
+      "sku": "33886",
+      "quantity": "11",
+      "unit": "Штука",
+      "price": "3 870,33",
+      "total": "42573.63"
+    },
+    {
+      "name": "Выключатель автоматический модульный 3п C 16А 4.5кА ВА47-29 IEK MVA20-3-016-C",
+      "sku": "11167",
+      "quantity": "24",
+      "unit": "Штука",
+      "price": "312,26",
+      "total": "7494.24"
+    },
+    {
+      "name": "Наконечник медный ТМЛс 120-12 луженый КВТ 60922",
+      "sku": "1182566",
+      "quantity": "96",
+      "unit": "Штука",
+      "price": "112,94",
+      "total": "10842.24"
+    },
+    {
+      "name": "Наконечник медный ТМЛс 120-12 луженый КВТ 60922",
+      "sku": "1182566",
+      "quantity": "179",
+      "unit": "Штука",
+      "price": "112,94",
+      "total": "20216.26"
+    }
+  ],
+  "error": null,
+  "page_number": 2,
+  "total_pages_processed": 2,
+  "supplier": {
+    "name": "unknown"
+  },
+  "buyer": {
+    "name": "unknown"
+  },
+  "payment": {},
+  "barcodes": []
+}

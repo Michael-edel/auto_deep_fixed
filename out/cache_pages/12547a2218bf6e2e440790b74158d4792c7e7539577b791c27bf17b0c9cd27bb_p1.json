@@ -1,0 +1,54 @@
+{
+  "document_type": "счет на оплату",
+  "iin_bin": "140240021186",
+  "company_name": "ТОО \"Форстрейд\"",
+  "document_number": "УТ-22800",
+  "document_date": "28.10.2022",
+  "subtotal": "9200,00",
+  "vat": "985,71",
+  "total": "10185,71",
+  "items": [
+    {
+      "name": "Аккумулятор для ноутбука Lenovo G400S/ 14.8 В (совместим с 14,4 В)/ 2200 мАч, Verton",
+      "sku": "УТ-00023389",
+      "quantity": "1",
+      "unit": "шт",
+      "price": "8200,00",
+      "total": "8200.00"
+    },
+    {
+      "name": "Курьерская доставка товаров",
+      "sku": "00-00008792",
+      "quantity": "1",
+      "unit": "шт",
+      "price": "1000,00",
+      "total": "1000.00"
+    }
+  ],
+  "error": null,
+  "page_number": 1,
+  "total_pages_processed": 1,
+  "supplier": {
+    "name": "ТОО \"Форстрейд\"",
+    "bin_iin": "140240021186",
+    "address": "050035, г. Алматы, микрорайон 8, дом № 4А, офис 220",
+    "phone": "+7(727) 318-75-65"
+  },
+  "buyer": {
+    "name": "ТОО Michael",
+    "bin_iin": "170940023817",
+    "address": "141200, Республика Казахстан, Павлодарская обл., г.Экибастуз, ул.Абая, здание 60/1, офис 113",
+    "phone": "+7 (7187) 740864"
+  },
+  "payment": {
+    "beneficiary_bank_name": "АО \"Kaspi Bank\"",
+    "beneficiary_bank_bik": "CASPKZKA",
+    "beneficiary_account_iban": "KZ22722S000001455222",
+    "beneficiary_bin_iin": "140240021186",
+    "kbe": "17",
+    "knp": "710",
+    "payment_code": "3K221000YT0228000001",
+    "payment_purpose": "Оплата по заказу клиента №УТ-22800"
+  },
+  "barcodes": []
+}

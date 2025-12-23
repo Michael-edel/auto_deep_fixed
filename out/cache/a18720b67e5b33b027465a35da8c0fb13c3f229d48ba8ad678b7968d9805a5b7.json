@@ -1,0 +1,105 @@
+{
+  "pages": [
+    {
+      "document_type": "счет на оплату",
+      "iin_bin": "081140001682",
+      "company_name": "ТОО VENDER",
+      "document_number": "Счет № 596017",
+      "document_date": "14 сентября 2023",
+      "subtotal": "442 865",
+      "vat": "53 144",
+      "total": "496 009",
+      "items": [
+        {
+          "name": "Масляный обогреватель, SVC, OH-1500-7, Мощность 1500Вт, Площадь обогрева: до 15м2, 7 секций, 3 режима работы, Регулировка температуры, Отключение при перегреве, Колеса для перемещения, Серый",
+          "sku": "32833",
+          "quantity": "10",
+          "unit": "шт",
+          "price": "15 900",
+          "total": "159000.00"
+        },
+        {
+          "name": "Лампа светодиодная, ANDELI, AD16-22D, (зелёная), АС 230V",
+          "sku": "14906",
+          "quantity": "50",
+          "unit": "шт",
+          "price": "212",
+          "total": "10600.00"
+        },
+        {
+          "name": "Видеокарта, PALIT, RTX3060 STORMX 8G, GDDR6, 128bit, 3-DP, HDMI, 170*125*40 мм, Цветная коробка",
+          "sku": "46681",
+          "quantity": "2",
+          "unit": "шт",
+          "price": "147 900",
+          "total": "295800.00"
+        },
+        {
+          "name": "Реле тепловое, ANDELI, JR28-25 D1308 (2.5-4А)",
+          "sku": "14697",
+          "quantity": "5",
+          "unit": "шт",
+          "price": "1 202",
+          "total": "6010.00"
+        },
+        {
+          "name": "Реле контроля фаз напряжения, ANDELI, XJ11, 380V, (аналог РКФ-11, ЕЛ-11М)",
+          "sku": "14592",
+          "quantity": "2",
+          "unit": "шт",
+          "price": "4 997",
+          "total": "9994.00"
+        },
+        {
+          "name": "Автоматический выключатель, DEKraft, 11056DEK, ВА101 1Р C 25A 4,5кА",
+          "sku": "47046",
+          "quantity": "24",
+          "unit": "шт",
+          "price": "436",
+          "total": "10464.00"
+        },
+        {
+          "name": "Картридж, Europrint, EPC-EP27, Для принтеров Canon MF3110/3220/3228/3240/5530/5550/5630/5650/5730/5750/5770, LBP-3200, 2500 страниц.",
+          "sku": "3726",
+          "quantity": "1",
+          "unit": "шт",
+          "price": "4 141",
+          "total": "4141.00"
+        }
+      ],
+      "error": null,
+      "page_number": 1,
+      "total_pages_processed": 1,
+      "supplier": {
+        "name": "ТОО VENDER",
+        "bin_iin": "081140001682",
+        "address": "Алматы, Нурсултана Назарбаева 19",
+        "phone": "+7 727 300 0 300"
+      },
+      "buyer": {
+        "name": "ТОО Michael",
+        "bin_iin": "170940023817",
+        "address": "",
+        "phone": ""
+      },
+      "payment": {
+        "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+        "beneficiary_bank_bik": "KCJBKZKX",
+        "beneficiary_account_iban": "KZ568562203117839999",
+        "beneficiary_bin_iin": "081140001682",
+        "kbe": "17",
+        "knp": "710",
+        "payment_code": "",
+        "payment_purpose": ""
+      },
+      "barcodes": [
+        "4710562243444",
+        "NE63060019P1-190AF",
+        "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000596017%22%2C%22date%22%3A%2214%2E09%2E2023%22%2C%22sum%22%3A496009%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22cb20e1f5%2D52b1%2D11ee%2Da834%2D002590a8d631%22%7d",
+        "https://r.alstyle.kz/book",
+        "https://clc.to/alstyle_banner5"
+      ]
+    }
+  ],
+  "total_pages": 1
+}

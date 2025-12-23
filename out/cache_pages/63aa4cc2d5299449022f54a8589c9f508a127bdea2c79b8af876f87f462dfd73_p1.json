@@ -1,0 +1,60 @@
+{
+  "document_type": "счет на оплату",
+  "iin_bin": "081140001682",
+  "company_name": "ТОО VENDER",
+  "document_number": "30000076493",
+  "document_date": "22 мая 2023",
+  "subtotal": "2 353 621",
+  "vat": "282 435",
+  "total": "2 636 056",
+  "items": [
+    {
+      "name": "Комплект инициализации, Xerox, VersaLink B7125 (097S05185)",
+      "sku": "42425",
+      "quantity": "4",
+      "unit": "шт",
+      "price": "24 929",
+      "total": "99716.00"
+    },
+    {
+      "name": "Базовый модуль МФУ, Xerox, VersaLink B7125/B7130/B7135 (B7101V_D), Настольная конфигурация",
+      "sku": "42424",
+      "quantity": "4",
+      "unit": "шт",
+      "price": "634 085",
+      "total": "2536340.00"
+    }
+  ],
+  "error": null,
+  "page_number": 1,
+  "total_pages_processed": 1,
+  "supplier": {
+    "name": "ТОО VENDER",
+    "bin_iin": "081140001682",
+    "address": "Алматы, Нурсултана Назарбаева 19",
+    "phone": "+7 727 300 0 300"
+  },
+  "buyer": {
+    "name": "ТОО Michael",
+    "bin_iin": "170940023817",
+    "address": "",
+    "phone": ""
+  },
+  "payment": {
+    "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+    "beneficiary_bank_bik": "KKBKZKX",
+    "beneficiary_account_iban": "KZ568562203117839999",
+    "beneficiary_bin_iin": "170940023817",
+    "kbe": "17",
+    "knp": "710",
+    "payment_code": "",
+    "payment_purpose": ""
+  },
+  "barcodes": [
+    "KZ568562203117839999",
+    "KZ986017131000008308",
+    "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2230000076493%22%2C%22date%22%3A%2222%2E05%2E2023%22%2C%22sum%22%3A2636056%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22d8ad6f5f%2Df85e%2D11ed%2Da3e0%2D503eaa0d10ba%22%7d",
+    "https://r.alstyle.kz/book",
+    "https://clc.to/alstyle_banner4"
+  ]
+}

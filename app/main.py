@@ -1,11 +1,10 @@
 """FastAPI приложение для обработки документов."""
 
 import uuid
-import time
 import logging
-import tempfile
+import threading
 from pathlib import Path
-from typing import Optional, List
+from typing import Optional
 
 from fastapi import FastAPI, UploadFile, File, HTTPException, Header
 from fastapi.responses import JSONResponse
@@ -20,9 +19,9 @@ sys.path.insert(0, str(root_dir))
 
 from utils.logger import setup_logging
 from utils.config import load_settings, Settings
-from core.ai_client import AIClient
 from storage.database import Database
-from core.document_processor import DocumentProcessor
+from storage.job_queue import JobQueue, JobStatus
+from core.worker import DocumentWorker
 
 # Настройка логирования
 setup_logging("INFO")
@@ -37,56 +36,64 @@ app = FastAPI(
 
 # Глобальные объекты (инициализируются при старте)
 settings: Optional[Settings] = None
-ai_client: Optional[AIClient] = None
 db: Optional[Database] = None
-processor: Optional[DocumentProcessor] = None
+queue: Optional[JobQueue] = None
+worker: Optional[DocumentWorker] = None
+stop_event: Optional[threading.Event] = None
 
 
 @app.on_event("startup")
 async def startup_event():
     """Инициализация при старте приложения."""
-    global settings, ai_client, db, processor
+    global settings, db, queue, worker, stop_event
     
     logger.info("Инициализация приложения...")
     settings = load_settings()
     
-    ai_client = AIClient(
-        api_key=settings.openai_api_key,
-        model=settings.openai_model,
-        max_concurrency=settings.max_openai_concurrency,
-        min_interval_sec=settings.openai_min_interval_sec,
-        max_retries=settings.openai_max_retries
-    )
-    
+    # Инициализация базы данных
     db = Database(settings.db_path)
-    processor = DocumentProcessor(ai=ai_client, db=db)
     
-    logger.info("Приложение готово к работе")
+    # Инициализация очереди задач
+    queue = JobQueue()
+    
+    # Запуск воркера
+    stop_event = threading.Event()
+    worker = DocumentWorker(queue, stop_event)
+    worker.start()
+    
+    logger.info("Приложение готово к работе (API + Worker)")
 
 
 @app.on_event("shutdown")
 async def shutdown_event():
     """Очистка при завершении приложения."""
-    logger.info("Завершение работы приложения")
+    global worker, stop_event
+    
+    logger.info("Завершение работы приложения...")
+    
+    # Останавливаем воркер
+    if worker:
+        worker.stop()
+    
+    if stop_event:
+        stop_event.set()
+    
+    logger.info("Приложение остановлено")
 
 
 # Модели ответов
 class ProcessResponse(BaseModel):
     job_id: str
     status: str
-    cached: bool
-    result: Optional[dict] = None
-    stats: dict
-    billing: dict
 
 
-class BatchProcessResponse(BaseModel):
+class JobResultResponse(BaseModel):
     job_id: str
     status: str
-    files_processed: int
-    results: List[ProcessResponse]
-    total_stats: dict
-    total_billing: dict
+    result: Optional[dict] = None
+    stats: Optional[dict] = None
+    billing: Optional[dict] = None
+    error: Optional[str] = None
 
 
 class StatsResponse(BaseModel):
@@ -101,117 +108,13 @@ class StatsResponse(BaseModel):
     savings_usd: float  # Экономия за счет кэша
 
 
-def _calculate_cost(tokens_in: int, tokens_out: int, price_in: float, price_out: float) -> float:
-    """Рассчитать стоимость в USD."""
-    cost_in = (tokens_in / 1000.0) * price_in
-    cost_out = (tokens_out / 1000.0) * price_out
-    return cost_in + cost_out
-
-
-def _process_file_internal(
-    file: UploadFile,
-    client_id: Optional[str] = None,
-    job_id: Optional[str] = None
-) -> ProcessResponse:
-    """Внутренняя функция обработки файла."""
-    if not processor or not ai_client or not db:
-        raise HTTPException(status_code=500, detail="Приложение не инициализировано")
-    
-    if job_id is None:
-        job_id = str(uuid.uuid4())
-    
-    start_time = time.time()
-    
-    # Сбрасываем счетчики перед обработкой
-    ai_client.reset_counters()
-    processor.reset_stats()
-    
-    # Читаем файл
-    file_bytes = file.file.read()
-    file_path = Path(file.filename)
-    
-    # Сохраняем во временный файл для обработки
-    # Используем tempfile для кроссплатформенности
-    temp_dir = Path("out/temp")
-    temp_dir.mkdir(parents=True, exist_ok=True)
-    temp_file = temp_dir / f"{job_id}_{file.filename}"
-    try:
-        temp_file.write_bytes(file_bytes)
-        
-        # Вычисляем хеш
-        file_hash = processor.get_file_hash(temp_file)
-        
-        # Обрабатываем файл (process_file сам проверит кэш и увеличит счетчики)
-        result = processor.process_file(temp_file)
-        
-        # Определяем, был ли использован кэш по статистике
-        stats = processor.get_stats()
-        cached = stats.get("cache_hit", 0) > 0
-        
-        if cached:
-            logger.info(f"Cache hit for {file.filename} (job_id: {job_id})")
-        else:
-            logger.info(f"Cache miss for {file.filename} (job_id: {job_id})")
-        
-        # Получаем статистику
-        elapsed_ms = int((time.time() - start_time) * 1000)
-        processor_stats = processor.get_stats()
-        openai_requests = ai_client.get_request_count()
-        tokens_in, tokens_out = ai_client.get_tokens()
-        
-        # Рассчитываем стоимость
-        cost_usd = _calculate_cost(
-            tokens_in, tokens_out,
-            settings.price_per_1k_in,
-            settings.price_per_1k_out
-        )
-        
-        # Сохраняем в базу
-        db.save_run(
-            job_id=job_id,
-            client_id=client_id,
-            filename=file.filename,
-            file_hash=file_hash,
-            cached=cached,
-            openai_requests=openai_requests,
-            tokens_in=tokens_in,
-            tokens_out=tokens_out,
-            cost_usd=cost_usd,
-            elapsed_ms=elapsed_ms
-        )
-        
-        return ProcessResponse(
-            job_id=job_id,
-            status="success",
-            cached=cached,
-            result=result,
-            stats={
-                "cache_hit": processor_stats.get("cache_hit", 0),
-                "cache_miss": processor_stats.get("cache_miss", 0),
-                "openai_requests": openai_requests,
-                "elapsed_ms": elapsed_ms,
-            },
-            billing={
-                "tokens_in": tokens_in,
-                "tokens_out": tokens_out,
-                "cost_usd": round(cost_usd, 6),
-            }
-        )
-    except Exception as e:
-        logger.error(f"Ошибка при обработке файла {file.filename}: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail=f"Ошибка обработки: {str(e)}")
-    finally:
-        # Удаляем временный файл
-        if temp_file.exists():
-            temp_file.unlink()
-
-
 @app.get("/health")
 async def health():
     """Проверка здоровья сервиса."""
     return {
         "status": "ok",
-        "service": "document-processing-api"
+        "service": "document-processing-api",
+        "worker_running": worker.is_running if worker else False
     }
 
 
@@ -221,71 +124,86 @@ async def process_document(
     x_client_id: Optional[str] = Header(None, alias="X-Client-ID")
 ):
     """
-    Обработать один документ.
+    Поставить задачу на обработку документа в очередь.
     
     - **file**: Файл для обработки (PDF, JPG, PNG и т.д.)
     - **X-Client-ID**: Опциональный идентификатор клиента
-    """
-    return _process_file_internal(file, client_id=x_client_id)
-
-
-@app.post("/v1/process/batch", response_model=BatchProcessResponse)
-async def process_batch(
-    files: List[UploadFile] = File(...),
-    x_client_id: Optional[str] = Header(None, alias="X-Client-ID")
-):
-    """
-    Обработать несколько документов.
     
-    - **files**: Список файлов для обработки
-    - **X-Client-ID**: Опциональный идентификатор клиента
+    Возвращает job_id для проверки статуса через GET /v1/result/{job_id}
     """
-    if not processor or not ai_client or not db:
-        raise HTTPException(status_code=500, detail="Приложение не инициализировано")
+    if not queue:
+        raise HTTPException(status_code=500, detail="Очередь не инициализирована")
     
+    # Генерируем job_id
     job_id = str(uuid.uuid4())
-    results = []
-    total_tokens_in = 0
-    total_tokens_out = 0
-    total_cost_usd = 0.0
-    total_elapsed_ms = 0
     
-    for file in files:
-        try:
-            response = _process_file_internal(file, client_id=x_client_id, job_id=job_id)
-            results.append(response)
-            total_tokens_in += response.billing["tokens_in"]
-            total_tokens_out += response.billing["tokens_out"]
-            total_cost_usd += response.billing["cost_usd"]
-            total_elapsed_ms += response.stats["elapsed_ms"]
-        except Exception as e:
-            logger.error(f"Ошибка при обработке файла {file.filename}: {e}")
-            results.append(ProcessResponse(
-                job_id=job_id,
-                status="error",
-                cached=False,
-                result=None,
-                stats={"error": str(e)},
-                billing={}
-            ))
+    # Читаем файл
+    file_bytes = await file.read()
     
-    return BatchProcessResponse(
-        job_id=job_id,
-        status="completed",
-        files_processed=len(results),
-        results=results,
-        total_stats={
-            "total_files": len(files),
-            "successful": len([r for r in results if r.status == "success"]),
-            "failed": len([r for r in results if r.status == "error"]),
-            "total_elapsed_ms": total_elapsed_ms,
-        },
-        total_billing={
-            "total_tokens_in": total_tokens_in,
-            "total_tokens_out": total_tokens_out,
-            "total_cost_usd": round(total_cost_usd, 6),
-        }
+    # Сохраняем файл во временную директорию
+    temp_dir = Path("out/jobs")
+    temp_dir.mkdir(parents=True, exist_ok=True)
+    temp_file = temp_dir / f"{job_id}_{file.filename}"
+    
+    try:
+        temp_file.write_bytes(file_bytes)
+        
+        # Добавляем задачу в очередь
+        queue.add_job(
+            job_id=job_id,
+            filename=file.filename,
+            file_path=str(temp_file),
+            client_id=x_client_id
+        )
+        
+        logger.info(f"Задача добавлена в очередь: {job_id} ({file.filename})")
+        
+        return ProcessResponse(
+            job_id=job_id,
+            status=JobStatus.QUEUED.value
+        )
+    
+    except Exception as e:
+        logger.error(f"Ошибка при добавлении задачи: {e}", exc_info=True)
+        # Удаляем файл при ошибке
+        if temp_file.exists():
+            temp_file.unlink()
+        raise HTTPException(status_code=500, detail=f"Ошибка при создании задачи: {str(e)}")
+
+
+@app.get("/v1/result/{job_id}", response_model=JobResultResponse)
+async def get_result(job_id: str):
+    """
+    Получить результат обработки задачи.
+    
+    - **job_id**: ID задачи, полученный из POST /v1/process
+    
+    Статусы:
+    - `queued` - задача в очереди
+    - `processing` - задача обрабатывается
+    - `done` - задача завершена успешно (result доступен)
+    - `error` - ошибка обработки (error доступен)
+    """
+    if not queue:
+        raise HTTPException(status_code=500, detail="Очередь не инициализирована")
+    
+    job = queue.get_job(job_id)
+    
+    if not job:
+        raise HTTPException(status_code=404, detail=f"Задача {job_id} не найдена")
+    
+    response = JobResultResponse(
+        job_id=job["job_id"],
+        status=job["status"],
+        result=job.get("result"),
+        stats=job.get("stats"),
+        billing=job.get("billing"),
+        error=job.get("error_message")
     )
+    
+    return response
+
+
 
 
 @app.get("/v1/stats", response_model=StatsResponse)

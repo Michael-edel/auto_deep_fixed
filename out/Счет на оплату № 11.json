@@ -1,0 +1,53 @@
+{
+  "source_file": "invoices/Счет на оплату № 11.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "230940017925",
+        "company_name": "ТОО \"НК Гарант\"",
+        "document_number": "Счет на оплату № 11",
+        "document_date": "26 октября 2023 г.",
+        "subtotal": "236 550",
+        "vat": "25 344,64",
+        "total": "236 550",
+        "items": [
+          {
+            "name": "Степлакс MC-T 2500х1550х530 4 полки",
+            "sku": "000000000067",
+            "quantity": "3,000",
+            "unit": "шт",
+            "price": "78 850",
+            "total": "236550.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "ТОО \"НК Гарант\"",
+          "bin_iin": "230940017925",
+          "address": "ул.Утеген Батыра, д.73, кв.207"
+        },
+        "buyer": {
+          "name": "ТОО \"Michael\"",
+          "bin_iin": "170940023817",
+          "address": "Республика Казахстан, Павлодарская обл, г.Екибастуз, ул.Абай, дом № 60/1, офис 113"
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+          "beneficiary_bank_bik": "KZJBKZKX",
+          "beneficiary_bin_iin": "230940017925",
+          "kbe": "17",
+          "knp": "710",
+          "beneficiary_account_iban": null,
+          "payment_code": null,
+          "payment_purpose": null
+        },
+        "barcodes": []
+      }
+    ],
+    "total_pages": 1
+  }
+}

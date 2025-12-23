@@ -1,0 +1,193 @@
+{
+  "source_file": "invoices/Счет на оплату покупателю № 00000033904 от 7 сентября 2023 г.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "110140018870",
+        "company_name": "Товарищество с ограниченной ответственностью \"РекламИнвестГрупп\"",
+        "document_number": "00000033904",
+        "document_date": "7 сентября 2023 г.",
+        "subtotal": "285 100,00",
+        "vat": "30 546,42",
+        "total": "285 100,00",
+        "items": [
+          {
+            "name": "Алюминиевый профиль для подсветки в комплекте с рассеивателем  (угловой НС-008/M1616  15,7х15,7 2M)",
+            "sku": "M-1616-2M",
+            "quantity": "10",
+            "unit": "шт",
+            "price": "1 900,00",
+            "total": "19000.00"
+          },
+          {
+            "name": "Алюминиевый профиль для подсветки в комплекте с рассеивателем (встраиваемый закругленный HC-014 24,1*6.9 2м)",
+            "sku": "HC-014",
+            "quantity": "10",
+            "unit": "шт",
+            "price": "2 300,00",
+            "total": "23000.00"
+          },
+          {
+            "name": "Алюминиевый профиль для подсветки с рассеивателем  (накладной HC-006В 23,8х12)",
+            "sku": "HC-006B",
+            "quantity": "10",
+            "unit": "шт",
+            "price": "2 400,00",
+            "total": "24000.00"
+          },
+          {
+            "name": "Алюминиевый профиль черный для подсветки в комплекте с черным рассеивателем (встраиваемый закругленный черный HC-014 24,1*7,5 2м)",
+            "sku": "HC-014BB",
+            "quantity": "10",
+            "unit": "шт",
+            "price": "3 000,00",
+            "total": "30000.00"
+          },
+          {
+            "name": "LED Выпрямитель JLV-12024А",
+            "sku": "24A",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "2 400,00",
+            "total": "12000.00"
+          },
+          {
+            "name": "Выпрямитель( LED JLV-12036А)",
+            "sku": "36A",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "3 030,00",
+            "total": "15150.00"
+          },
+          {
+            "name": "Светодиоды (LED) вмонтированные в гибкую панель R060GW08A-2835 (10000-12000К) белый холодный",
+            "sku": "L60W",
+            "quantity": "150",
+            "unit": "м",
+            "price": "400,00",
+            "total": "60000.00"
+          },
+          {
+            "name": "LED Выпрямитель JLV-12100KA-L",
+            "sku": "JLV-12100KA-L",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "5 000,00",
+            "total": "25000.00"
+          },
+          {
+            "name": "LED Выпрямитель JLV-12120KS",
+            "sku": "JLV-12120KS",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "3 550,00",
+            "total": "3550.00"
+          },
+          {
+            "name": "LED Выпрямитель JLV-12150KA-L",
+            "sku": "JLV-12150KA-L",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "8 100,00",
+            "total": "16200.00"
+          },
+          {
+            "name": "LED Выпрямитель JLV-12015K",
+            "sku": "O15W",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "1 550,00",
+            "total": "1550.00"
+          },
+          {
+            "name": "LED Выпрямитель  JLV-12036PA-W",
+            "sku": "JLV-12036PA-W",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "2 100,00",
+            "total": "10500.00"
+          },
+          {
+            "name": "LED Выпрямитель  JLV-400M-12",
+            "sku": "JLV-400N-12",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "6 300,00",
+            "total": "6300.00"
+          },
+          {
+            "name": "LED Выпрямитель JLV-12400KL",
+            "sku": "JLV-12400KL",
+            "quantity": "1",
+            "unit": "шт",
+            "price": "8 600,00",
+            "total": "8600.00"
+          },
+          {
+            "name": "LED Выпрямитель JLV-12045KA-W",
+            "sku": "JLV-12045КА-W",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "2 750,00",
+            "total": "13750.00"
+          },
+          {
+            "name": "LED Выпрямитель JLV-12060 KA-W",
+            "sku": "JLV-12060 KA-W",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "3 300,00",
+            "total": "16500.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 2,
+        "supplier": {
+          "name": "Товарищество с ограниченной ответственностью \"РекламИнвестГрупп\"",
+          "bin_iin": "110140018870",
+          "address": "050046, Республика Казахстан, г.Алматы, Сатпаева, дом № 90/34",
+          "phone": ""
+        },
+        "buyer": {
+          "name": "ТОО «Michael»",
+          "bin_iin": "170940023817",
+          "address": "141200, Республика Казахстан, Павлодарская обл., г.Экибастуз, ул.Абая, здание 60/1, офис 113",
+          "phone": "77187740864"
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"Народный Банк Казахстана\"",
+          "beneficiary_bank_bik": "HSBKKZKX",
+          "beneficiary_account_iban": "KZ436017131000028892",
+          "beneficiary_bin_iin": "110140018870",
+          "kbe": "17",
+          "knp": "710",
+          "payment_code": "",
+          "payment_purpose": ""
+        },
+        "barcodes": []
+      },
+      {
+        "document_type": "unknown",
+        "iin_bin": null,
+        "company_name": null,
+        "document_number": null,
+        "document_date": null,
+        "subtotal": null,
+        "vat": null,
+        "total": null,
+        "items": [],
+        "error": null,
+        "page_number": 2,
+        "total_pages_processed": 2,
+        "supplier": {},
+        "buyer": {},
+        "payment": {},
+        "barcodes": []
+      }
+    ],
+    "total_pages": 2
+  }
+}

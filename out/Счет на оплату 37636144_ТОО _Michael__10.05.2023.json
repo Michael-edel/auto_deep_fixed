@@ -1,0 +1,54 @@
+{
+  "source_file": "invoices/Счет на оплату 37636144_ТОО _Michael__10.05.2023.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "7704844420",
+        "company_name": "Общество с ограниченной ответственностью \"Русский Свет\"",
+        "document_number": "Н37636144",
+        "document_date": "10.05.2023",
+        "subtotal": "471 000,00",
+        "vat": "0,00",
+        "total": "471 000,00",
+        "items": [
+          {
+            "name": "Кабель КГ-ХЛ 3x120x135 (м) ",
+            "sku": "452874",
+            "quantity": "120",
+            "unit": "м",
+            "price": "3 925,00",
+            "total": "471000.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "Общество с ограниченной ответственностью \"Русский Свет\"",
+          "bin_iin": "7704844420",
+          "address": "Россия, Тверская обл, Тверь, Победы пр-к, дом 71, А",
+          "phone": "7-(4822)-32-72-32"
+        },
+        "buyer": {
+          "name": "ТОО \"Michael\"",
+          "bin_iin": "170940023817",
+          "address": "Казахстан, г. Экибастуз, ул. А.Байтоста 60/1, 113, мен.",
+          "phone": "2133908"
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"ББР\"",
+          "beneficiary_bank_bik": "044525880",
+          "beneficiary_account_iban": "407028101080000000236",
+          "beneficiary_bin_iin": "7704844420",
+          "kbe": null,
+          "payment_code": null,
+          "payment_purpose": null
+        },
+        "barcodes": []
+      }
+    ],
+    "total_pages": 1
+  }
+}

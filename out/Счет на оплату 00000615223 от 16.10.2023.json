@@ -1,0 +1,65 @@
+{
+  "source_file": "invoices/Счет на оплату 00000615223 от 16.10.2023.pdf",
+  "error": "",
+  "result": {
+    "pages": [
+      {
+        "document_type": "счет на оплату",
+        "iin_bin": "081140001682",
+        "company_name": "ТОО VENDER",
+        "document_number": "615223",
+        "document_date": "16 октября 2023",
+        "subtotal": "24 517",
+        "vat": "2 627",
+        "total": "24 517",
+        "items": [
+          {
+            "name": "Автомат защиты двигателя, ANDELI, GV2-M21 (17-23A)",
+            "sku": "42894",
+            "quantity": "2",
+            "unit": "шт",
+            "price": "3 841",
+            "total": "7682.00"
+          },
+          {
+            "name": "Автомат защиты двигателя, ANDELI, GV2-M22 (20-25A)",
+            "sku": "42891",
+            "quantity": "5",
+            "unit": "шт",
+            "price": "3 367",
+            "total": "16835.00"
+          }
+        ],
+        "error": null,
+        "page_number": 1,
+        "total_pages_processed": 1,
+        "supplier": {
+          "name": "ТОО VENDER",
+          "bin_iin": "081140001682",
+          "address": "Алматы, Нурсултана Назарбаева 19",
+          "phone": "+7 727 300 0 300"
+        },
+        "buyer": {
+          "name": "ТОО Michael",
+          "bin_iin": "170940023817"
+        },
+        "payment": {
+          "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+          "beneficiary_bank_bik": "KCJBKZKX",
+          "beneficiary_account_iban": "KZ568562203117839999",
+          "kbe": "17",
+          "knp": "710",
+          "beneficiary_bin_iin": "081140001682",
+          "payment_code": null,
+          "payment_purpose": null
+        },
+        "barcodes": [
+          "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000615223%22%2C%22date%22%3A%2216%2E10%2E2023%22%2C%22sum%22%3A24517%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22f47416ab%2D6bd0%2D11ee%2D9ec8%2D002590a8d62b%22%7d",
+          "https://r.alstyle.kz/book",
+          "https://r.alstyle.kz/banner3"
+        ]
+      }
+    ],
+    "total_pages": 1
+  }
+}

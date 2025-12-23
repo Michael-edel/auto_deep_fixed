@@ -1,0 +1,90 @@
+{
+  "document_type": "счет на оплату",
+  "iin_bin": "081140001682",
+  "company_name": "ТОО VENDER",
+  "document_number": "522365",
+  "document_date": "11 мая 2023",
+  "subtotal": "184 472",
+  "vat": "19 765",
+  "total": "184 472",
+  "items": [
+    {
+      "name": "Переключатель, ANDELI, XB2-BD25, 2-позиционный",
+      "sku": "14589",
+      "quantity": "40",
+      "unit": "шт",
+      "price": "518",
+      "total": "20720.00"
+    },
+    {
+      "name": "Картридж, Europrint, EPC-CE285A, Для принтеров HP LaserJet P1102/M1132/M1212, 1600 страниц.",
+      "sku": "3716",
+      "quantity": "1",
+      "unit": "шт",
+      "price": "2 648",
+      "total": "2648.00"
+    },
+    {
+      "name": "Источник бесперебойного питания, SVC, V-800-L, Мощность 800ВА/480Вт, Диапазон работы AVR: 165-275В, AVR в режиме Booster: 138-292В, Бат.: 12В/9 Ач*1шт., 3 вых.: 2 Shuko CEE7+1 IEC C13 (Bypass), Чёрный",
+      "sku": "14466",
+      "quantity": "1",
+      "unit": "шт",
+      "price": "21 100",
+      "total": "21100.00"
+    },
+    {
+      "name": "Автоматический выключатель, ANDELI, AM1-400L 3P 400A",
+      "sku": "42883",
+      "quantity": "2",
+      "unit": "шт",
+      "price": "26 306",
+      "total": "52612.00"
+    },
+    {
+      "name": "Розетка на дин-рейку, ANDELI, ADC-5",
+      "sku": "15593",
+      "quantity": "20",
+      "unit": "шт",
+      "price": "612",
+      "total": "12240.00"
+    },
+    {
+      "name": "Процессор, Intel, i5-12400 LGA1700, оем, 18M, 2.50 GHz, 6/12 Core Alder Lake, 65 (117) Вт, UHD730",
+      "sku": "41463",
+      "quantity": "1",
+      "unit": "шт",
+      "price": "75 152",
+      "total": "75152.00"
+    }
+  ],
+  "error": null,
+  "page_number": 1,
+  "total_pages_processed": 1,
+  "supplier": {
+    "name": "ТОО VENDER",
+    "bin_iin": "081140001682",
+    "address": "Алматы, Нурсултана Назарбаева 19",
+    "phone": "+7 727 300 0 300"
+  },
+  "buyer": {
+    "name": "ТОО Michael",
+    "bin_iin": "170940023817",
+    "address": "",
+    "phone": ""
+  },
+  "payment": {
+    "beneficiary_bank_name": "АО \"Банк ЦентрКредит\"",
+    "beneficiary_bank_bik": "KCJBKZKX",
+    "beneficiary_account_iban": "KZ568562203117839999",
+    "beneficiary_bin_iin": "null",
+    "kbe": "17",
+    "knp": "710",
+    "payment_code": "",
+    "payment_purpose": ""
+  },
+  "barcodes": [
+    "https://b2bportal.al-style.kz/assembly?data=%7b%22id%22%3A%2200000522365%22%2C%22date%22%3A%2211%2E05%2E2023%22%2C%22sum%22%3A184472%2C%22company%5Fid%22%3A%22170940023817%22%2C%22GUID%22%3A%22c7c9c4b4%2Defb7%2D11ed%2Da81f%2D002590a8d631%22%7d",
+    "https://r.alstyle.kz/book",
+    "https://r.alstyle.kz/banner5"
+  ]
+}
