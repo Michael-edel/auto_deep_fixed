@@ -53,9 +53,26 @@ def _process_single_file(processor: DocumentProcessor, file_path: Path, out_dir:
     try:
         result = processor.process_file(file_path)
         error = ""
+        # Проверяем, есть ли ошибка rate limit в результате
+        if result and isinstance(result, dict):
+            # Для PDF с несколькими страницами проверяем pages
+            if "pages" in result:
+                for page in result.get("pages", []):
+                    if page.get("error") and "RATE_LIMIT" in str(page.get("error", "")):
+                        error = "RATE_LIMIT"
+                        result = None
+                        break
+            # Для одиночных документов проверяем error напрямую
+            elif result.get("error") and "RATE_LIMIT" in str(result.get("error", "")):
+                error = "RATE_LIMIT"
+                result = None
     except Exception as e:
         result = None
-        error = f"{type(e).__name__}: {e}"
+        error_str = str(e)
+        if "RATE_LIMIT" in error_str or "rate limit" in error_str.lower():
+            error = "RATE_LIMIT"
+        else:
+            error = f"{type(e).__name__}: {e}"
 
     per_name = _safe_name(file_path.stem) + ".json"
     per_path = out_dir / per_name
@@ -81,7 +98,9 @@ def main():
     ai = AIClient(
         api_key=settings.openai_api_key, 
         model=settings.openai_model,
-        max_concurrency=settings.max_openai_concurrency
+        max_concurrency=settings.max_openai_concurrency,
+        min_interval_sec=settings.openai_min_interval_sec,
+        max_retries=settings.openai_max_retries
     )
     db = Database(settings.db_path)
     processor = DocumentProcessor(ai=ai, db=db)

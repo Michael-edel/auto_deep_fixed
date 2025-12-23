@@ -53,7 +53,9 @@ async def startup_event():
     ai_client = AIClient(
         api_key=settings.openai_api_key,
         model=settings.openai_model,
-        max_concurrency=settings.max_openai_concurrency
+        max_concurrency=settings.max_openai_concurrency,
+        min_interval_sec=settings.openai_min_interval_sec,
+        max_retries=settings.openai_max_retries
     )
     
     db = Database(settings.db_path)

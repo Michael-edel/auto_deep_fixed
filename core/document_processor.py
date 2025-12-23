@@ -145,6 +145,20 @@ class DocumentProcessor:
                     # Обрабатываем страницу через OpenAI
                     logger.debug(f"Page cache miss: {p.name} page {idx} (hash: {file_hash[:8]}...)")
                     doc = self.ai.analyze_document_sync(img_bytes, extra_text=page_text)
+                    
+                    # Проверяем на ошибку rate limit
+                    if doc.error and "RATE_LIMIT" in doc.error:
+                        # Если rate limit, возвращаем ошибку в структуре страницы
+                        page_dict = {
+                            "page_number": idx,
+                            "total_pages_processed": len(pages),
+                            "error": doc.error,
+                            "document_type": "error"
+                        }
+                        docs.append(page_dict)
+                        # Не сохраняем в кэш при ошибке
+                        continue
+                    
                     doc.page_number = idx
                     doc.total_pages_processed = len(pages)
                     doc = self.corrector.correct_document(doc)
@@ -167,6 +181,17 @@ class DocumentProcessor:
             page_text = ""
             img_bytes = p.read_bytes()
             doc = self.ai.analyze_document_sync(img_bytes, extra_text=page_text)
+            
+            # Проверяем на ошибку rate limit
+            if doc.error and "RATE_LIMIT" in doc.error:
+                # Возвращаем ошибку в структуре результата
+                result = {
+                    "error": doc.error,
+                    "document_type": "error"
+                }
+                # Не сохраняем в кэш при ошибке
+                return result
+            
             doc = self.corrector.correct_document(doc)
             result = self._postprocess(doc).to_dict()
 
